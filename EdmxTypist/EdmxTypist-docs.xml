@@ -1,0 +1,1232 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EdmxTypist</name>
+    </assembly>
+    <members>
+        <member name="T:EdmxTypist.resources.emptyContainer">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.emptyContainer.#ctor">
+            <summary>
+            Initializes a new emptyContainer object using the connection string found in the 'emptyContainer' section of the application configuration file.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.emptyContainer.#ctor(System.String)">
+            <summary>
+            Initialize a new emptyContainer object.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.emptyContainer.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            Initialize a new emptyContainer object.
+            </summary>
+        </member>
+        <member name="F:Views.CopySettings.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Views.CopySettings.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Views.CopySettings.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.Options.ContextOptions">
+            <remarks>
+            Group the options for a <see cref="T:EdmxTypist.NameContextEnum">naming context</see>.
+            </remarks>
+        </member>
+        <member name="M:EdmxTypist.Options.ContextOptions.CopyFrom(EdmxTypist.Options.ContextOptions@)">
+            <summary>
+            Copies ALL the values from <paramref name="source"/> to <c>this</c> instance.
+            </summary>
+            <param name="source">ContextOptions instance to copy from</param>
+        </member>
+        <member name="M:EdmxTypist.Options.ContextOptions.parseList(System.String)">
+            <summary>
+            Encapsulates parsing of a word list so we can do fancy stuff later
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Options.ContextOptions.ListRemovePrefixes">
+            <summary>
+            Returns <see cref="P:EdmxTypist.Options.ContextOptions.RemovePrefixes"/> as a <c>List&lt;string&gt;</c>.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Options.ContextOptions.ListRemoveSuffixes">
+            <summary>
+            Returns <see cref="P:EdmxTypist.Options.ContextOptions.RemoveSuffixes"/> as a <c>List&lt;string&gt;</c>.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.ContextOptions.Flexing">
+            <summary>
+            Whether to pluralize, singularize, leave it alone or <see cref="F:EdmxTypist.Options.FlexingStrategyEnum.BeSmart"/>.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.ContextOptions.CaseStyle">
+            <summary>
+            Which writing style to choose. Can be CamelCase, lowerCamelCase or lower_underscores.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.ContextOptions.RemovePrefixes">
+            <summary>
+            Prefixes to remove before applying rules
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.ContextOptions.RemoveSuffixes">
+            <summary>
+            Suffixes to remove before applying rules
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.ContextOptions.AddPrefix">
+            <summary>
+            A prefix to be added to the transformed name
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.ContextOptions.AddSuffix">
+            <summary>
+            A suffix to be added to the transformed name
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.ContextOptions.ApplyRegex">
+            <summary>
+            When to apply regex expression
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.ContextOptions.RegexMatch">
+            <summary>
+            The regex to run
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.ContextOptions.RegexReplace">
+            <summary>
+            the regex match replacement
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Model.MetaComplexProperty.Parse(EdmxTypist.Model.MetaModel,EdmxTypist.Model.MetaEntityType,System.Xml.Linq.XElement)">
+             <summary>
+             
+             </summary>
+             <example>
+             Xml example:
+             <![CDATA[
+            		<Property Name="Shooting" Type="Movies.Location" Nullable="false" />
+             ]]>
+             </example>
+            <param name="mmodel"></param>
+            <param name="entityType"> </param>
+            <param name="scP"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EdmxTypist.EdmxFile">
+            <summary>
+            Represents an .edmx file and has a lot of useful methods are used across the app.
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.EdmxFile.SSDL_NS">
+            <summary>
+            The Namespace for Storage Schema
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.EdmxFile.CSDL_NS">
+            <summary>
+            The Namespace for Conceptual Schema
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.EdmxFile.MSL_NS">
+            <summary>
+            The Namespace for C-S Mapping
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.EdmxFile.Diagram_NS">
+            <summary>
+            The Namespace for the Diagram tags
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.InflectorTestEntities">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntities.#ctor">
+            <summary>
+            Initializes a new InflectorTestEntities object using the connection string found in the 'InflectorTestEntities' section of the application configuration file.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntities.#ctor(System.String)">
+            <summary>
+            Initialize a new InflectorTestEntities object.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            Initialize a new InflectorTestEntities object.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntities.AddTopedidos(EdmxTypist.resources.pedidos)">
+            <summary>
+            Deprecated Method for adding a new object to the pedidos EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntities.AddTousuarios(EdmxTypist.resources.usuarios)">
+            <summary>
+            Deprecated Method for adding a new object to the usuarios EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntities.get_pedidos(System.Nullable{System.Int32})">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+            <param name="user_id">No Metadata Documentation available.</param>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntities.get_pedidos(System.Nullable{System.Int32},System.Data.Objects.MergeOption)">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+            <param name="mergeOption"></param>
+            <param name="user_id">No Metadata Documentation available.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.InflectorTestEntities.pedidos">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.InflectorTestEntities.usuarios">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.pedidos">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.pedidos.Createpedidos(System.Int32,System.Int32)">
+            <summary>
+            Create a new pedidos object.
+            </summary>
+            <param name="pedido_id">Initial value of the pedido_id property.</param>
+            <param name="user_id">Initial value of the user_id property.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.pedidos.pedido_id">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.pedidos.user_id">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.pedidos.qtd_parcelas">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.pedidos.bonus_pontos_boleto">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.pedidos.bonus_pontos_boleto_creditado">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.pedidos.total">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.pedidos.usuarios">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.pedidos.usuariosReference">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.usuarios">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.usuarios.Createusuarios(System.Int32,EdmxTypist.resources.endereco)">
+            <summary>
+            Create a new usuarios object.
+            </summary>
+            <param name="user_id">Initial value of the user_id property.</param>
+            <param name="endereco">Initial value of the endereco property.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.usuarios.user_id">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.usuarios.nome">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.usuarios.sexo">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.usuarios.endereco">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.usuarios.pedidos">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.endereco">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.endereco.cep">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.endereco.cidade">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.MoviesContainer">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.MoviesContainer.#ctor">
+            <summary>
+            Initializes a new MoviesContainer object using the connection string found in the 'MoviesContainer' section of the application configuration file.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.MoviesContainer.#ctor(System.String)">
+            <summary>
+            Initialize a new MoviesContainer object.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.MoviesContainer.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            Initialize a new MoviesContainer object.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.MoviesContainer.AddToGenres(EdmxTypist.resources.Genre)">
+            <summary>
+            Deprecated Method for adding a new object to the Genres EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.MoviesContainer.AddToMovies(EdmxTypist.resources.Movie)">
+            <summary>
+            Deprecated Method for adding a new object to the Movies EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.MoviesContainer.AddToPeople(EdmxTypist.resources.Person)">
+            <summary>
+            Deprecated Method for adding a new object to the People EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.MoviesContainer.AddToRoles(EdmxTypist.resources.Role)">
+            <summary>
+            Deprecated Method for adding a new object to the Roles EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.MoviesContainer.AddToRolesTwo(EdmxTypist.resources.Role)">
+            <summary>
+            Deprecated Method for adding a new object to the RolesTwo EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.MoviesContainer.Genres">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.MoviesContainer.Movies">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.MoviesContainer.People">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.MoviesContainer.Roles">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.MoviesContainer.RolesTwo">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.Genre">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.Genre.CreateGenre(System.Int32,System.String)">
+            <summary>
+            Create a new Genre object.
+            </summary>
+            <param name="id">Initial value of the Id property.</param>
+            <param name="name">Initial value of the Name property.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.Genre.Id">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Genre.Name">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Genre.Movies">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.Movie">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.Movie.CreateMovie(System.Int32,System.String,EdmxTypist.resources.Location)">
+            <summary>
+            Create a new Movie object.
+            </summary>
+            <param name="id">Initial value of the Id property.</param>
+            <param name="name">Initial value of the Name property.</param>
+            <param name="shooting">Initial value of the Shooting property.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.Movie.Id">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Movie.Name">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Movie.Synopsis">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Movie.Published">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Movie.GenreId">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Movie.Shooting">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Movie.Genre">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Movie.GenreReference">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Movie.Roles">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.Person">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.Person.CreatePerson(System.Int32,System.String,EdmxTypist.resources.Location)">
+            <summary>
+            Create a new Person object.
+            </summary>
+            <param name="id">Initial value of the Id property.</param>
+            <param name="name">Initial value of the Name property.</param>
+            <param name="birthplace">Initial value of the Birthplace property.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.Person.Id">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Person.Name">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Person.BirthDate">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Person.Gender">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Person.Birthplace">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Person.Roles">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.Role">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.Role.CreateRole(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Create a new Role object.
+            </summary>
+            <param name="id">Initial value of the Id property.</param>
+            <param name="personId">Initial value of the PersonId property.</param>
+            <param name="movieId">Initial value of the MovieId property.</param>
+            <param name="name">Initial value of the Name property.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.Role.Id">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Role.PersonId">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Role.MovieId">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Role.Name">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Role.Movie">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Role.MovieReference">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Role.Person">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Role.PersonReference">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.Location">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.Location.CreateLocation(System.String,System.String,System.String)">
+            <summary>
+            Create a new Location object.
+            </summary>
+            <param name="city">Initial value of the City property.</param>
+            <param name="state">Initial value of the State property.</param>
+            <param name="country">Initial value of the Country property.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.Location.City">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Location.State">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Location.Country">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Model.MetaNavigationProperty.AssociationRole">
+            <summary>
+            The AssociationRole specified by the ToRole attribute
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.Model.MetaEntitySet">
+            <summary>
+            
+            </summary>
+            <remarks>
+            	
+            	Concept:
+            	<![CDATA[
+            		<EntitySet Name="Genres" EntityType="Movies.Genre" />
+            	]]>
+            	Mapping:
+            	<![CDATA[
+            		<EntitySetMapping Name="Genres">
+            			<EntityTypeMapping TypeName="Movies.Genre">
+            				<MappingFragment StoreEntitySet="genres">
+            					<ScalarProperty Name="Name" ColumnName="name" />
+            					<ScalarProperty Name="Id" ColumnName="genre_id" />
+            				</MappingFragment>
+            			</EntityTypeMapping>
+            		</EntitySetMapping>
+            	]]>
+            </remarks>
+        </member>
+        <member name="T:EdmxTypist.Controls.EdmxConfigGroup">
+            <remarks>
+            Custom control to make easy modifying configuration groups
+            </remarks>
+        </member>
+        <member name="F:EdmxTypist.Controls.EdmxConfigGroup.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Controls.EdmxConfigGroup.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EdmxTypist.Controls.EdmxConfigGroup.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Controls.EdmxConfigGroup.#ctor">
+            <summary>
+            The sole constructor
+            </summary>
+        </member>
+        <member name="M:XElementExtensions.D(System.Xml.Linq.XElement,System.String,System.String)">
+            <summary>
+            Find the descendants of a node
+            </summary>
+            <param name="el"></param>
+            <param name="nodeName"></param>
+            <param name="NS">Optional. The namespace of the descendants</param>
+            <returns></returns>
+        </member>
+        <member name="M:XElementExtensions.E(System.Xml.Linq.XElement,System.String,System.String)">
+            <summary>
+            Find the first child node which that has the passed <paramref name="nodeName"/>.
+            </summary>
+            <param name="el"></param>
+            <param name="nodeName"></param>
+            <param name="NS">Optional. The namespace of the descendant</param>
+            <returns></returns>
+        </member>
+        <member name="M:XElementExtensions.Es(System.Xml.Linq.XElement,System.String,System.String)">
+            <summary>
+            Find the all the child nodes that has the passed <paramref name="nodeName"/>.
+            </summary>
+            <param name="el"></param>
+            <param name="nodeName"></param>
+            <param name="NS">Optional. The namespace of the descendant</param>
+            <returns></returns>
+        </member>
+        <member name="T:EdmxTypist.Model.MetaEntityType">
+            <summary>
+            Stores info about an EntityType
+            </summary>
+            <summary>
+            
+            </summary>
+            <example>
+            	Concept Xml:
+            	<![CDATA[
+            	<EntityType Name="Genre">
+                     <Key>
+                       <PropertyRef Name="Id" />
+                     </Key>
+                     <Property Type="Int32" Name="Id" Nullable="false" />
+                     <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+                     <NavigationProperty Name="Movies" Relationship="Movies.FK_movies_genres" FromRole="genre" ToRole="movie" />
+                   </EntityType>
+            	]]>
+            	Mapping Xml:
+            	<![CDATA[
+            		<EntitySetMapping Name="Genres">
+                       <EntityTypeMapping TypeName="Movies.Genre">
+                         <MappingFragment StoreEntitySet="genres">
+                           <ScalarProperty Name="Name" ColumnName="name" />
+                           <ScalarProperty Name="Id" ColumnName="genre_id" />
+                         </MappingFragment>
+                       </EntityTypeMapping>
+                     </EntitySetMapping>
+            	]]>
+            </example>
+        </member>
+        <member name="M:EdmxTypist.Model.MetaEntityType.Link(EdmxTypist.Model.MetaEntityType,EdmxTypist.Model.MetaEntityTypeStore,System.Xml.Linq.XElement)">
+            <summary>
+            Links a MetaEntityType with a MetaEntityTypeStore all the way down do the properties.
+            </summary>
+            <example>
+            	Mapping Xml:
+            	<![CDATA[
+               <EntityTypeMapping TypeName="Movies.Movie">
+                 <MappingFragment StoreEntitySet="movies">
+                   <ScalarProperty Name="GenreId" ColumnName="genre_id" />
+                   <ScalarProperty Name="Published" ColumnName="published" />
+                   <ScalarProperty Name="Synopsis" ColumnName="synopsis" />
+                   <ScalarProperty Name="Name" ColumnName="name" />
+                   <ScalarProperty Name="Id" ColumnName="movie_id" />
+                   <ComplexProperty Name="Shooting">
+                     <ScalarProperty Name="Country" ColumnName="shooting_country" />
+                     <ScalarProperty Name="State" ColumnName="shooting_state" />
+                     <ScalarProperty Name="City" ColumnName="shooting_city" />
+                   </ComplexProperty>
+                 </MappingFragment>
+               </EntityTypeMapping>
+            	]]>
+            </example>
+        </member>
+        <member name="P:EdmxTypist.Model.MetaEntityType.EntitySet">
+            <summary>
+            The MetaEntitySet info for the EntitySet this Entity belongs to
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.InflectorTestEntitiesProcessed">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntitiesProcessed.#ctor">
+            <summary>
+            Initializes a new InflectorTestEntitiesProcessed object using the connection string found in the 'InflectorTestEntitiesProcessed' section of the application configuration file.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntitiesProcessed.#ctor(System.String)">
+            <summary>
+            Initialize a new InflectorTestEntitiesProcessed object.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntitiesProcessed.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            Initialize a new InflectorTestEntitiesProcessed object.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntitiesProcessed.AddToPedidos(EdmxTypist.resources.Pedido)">
+            <summary>
+            Deprecated Method for adding a new object to the Pedidos EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntitiesProcessed.AddToUsuarios(EdmxTypist.resources.Usuario)">
+            <summary>
+            Deprecated Method for adding a new object to the Usuarios EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntitiesProcessed.GetPedidos(System.Nullable{System.Int32})">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+            <param name="user_id">No Metadata Documentation available.</param>
+        </member>
+        <member name="M:EdmxTypist.resources.InflectorTestEntitiesProcessed.GetPedidos(System.Nullable{System.Int32},System.Data.Objects.MergeOption)">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+            <param name="mergeOption"></param>
+            <param name="user_id">No Metadata Documentation available.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.InflectorTestEntitiesProcessed.Pedidos">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.InflectorTestEntitiesProcessed.Usuarios">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.Pedido">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.Pedido.CreatePedido(System.Int32,System.Int32)">
+            <summary>
+            Create a new Pedido object.
+            </summary>
+            <param name="pedidoId">Initial value of the PedidoId property.</param>
+            <param name="userId">Initial value of the UserId property.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.Pedido.PedidoId">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Pedido.UserId">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Pedido.QtdParcelas">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Pedido.BonusPontosBoleto">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Pedido.BonusPontosBoletoCreditado">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Pedido.Total">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Pedido.Usuario">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Pedido.UsuarioReference">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.Usuario">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.resources.Usuario.CreateUsuario(System.Int32,EdmxTypist.resources.Endereco)">
+            <summary>
+            Create a new Usuario object.
+            </summary>
+            <param name="userId">Initial value of the UserId property.</param>
+            <param name="endereco">Initial value of the Endereco property.</param>
+        </member>
+        <member name="P:EdmxTypist.resources.Usuario.UserId">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Usuario.Nome">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Usuario.Sexo">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Usuario.Endereco">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Usuario.Pedidos">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.resources.Endereco">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Endereco.Cep">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.resources.Endereco.Cidade">
+            <summary>
+            No Metadata Documentation available.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.Model.MetaEntitySetStore">
+            <summary>
+            	
+            </summary>
+            <example>
+            	Storage XML example:
+            	<![CDATA[
+            		<EntitySet Name="genres" EntityType="Movies.Store.genres" store:Type="Tables" Schema="dbo" />
+            	]]>
+            </example>
+        </member>
+        <member name="P:EdmxTypist.Model.MetaPropertyStore.Concept">
+            <summary>
+            Represents the conceptual object tied to this store, which will be either a <see cref="T:EdmxTypist.Model.MetaScalarProperty"/> or a <see cref="T:EdmxTypist.Model.MetaComplexTypeProperty"/>.
+            You can determine the type of the returned object using 
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.Model.MetaEntityTypeStore">
+            <summary>
+            
+            </summary>
+            <example>
+            Xml example:
+            <![CDATA[
+            	<EntityType Name="genres">
+            		<Key>
+            			<PropertyRef Name="genre_id" />
+            		</Key>
+            		<Property Name="genre_id" Type="int" Nullable="false" />
+            		<Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+            	</EntityType>
+            ]]>
+            </example>
+        </member>
+        <member name="F:EdmxTypist.Views.Main.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Views.Main.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EdmxTypist.Views.Main.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.Typist">
+            <summary>
+            Our Holy Typist. It processes our model and type the name we want for each piece according to our options.
+            </summary>
+            <remarks>
+            	It all begins in the conceptual model because it's the only part always present. 
+            Each MetaObject knows how to find it's complementary elements inside Storage Schema and C-S Mapping
+            Since we are using EF for storing the meta model, references are automatically updated
+            after building the meta model, we process the xml again, this time replacing the names.
+            For each name to be replaced, the relevant meta model object is passed as an info parameter.
+            This allows custom renamers to use any relanship or related data to decide how the Entity, Property, 
+            or any other piece should be named.
+            </remarks>
+        </member>
+        <member name="F:EdmxTypist.Typist.SSDL_NS">
+            <summary>
+            The Namespace for Storage Schema
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.Typist.CSDL_NS">
+            <summary>
+            The Namespace for Conceptual Schema
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.Typist.MSL_NS">
+            <summary>
+            The Namespace for C-S Mapping
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.Typist.Diagram_NS">
+            <summary>
+            The Namespace for the Diagram tags
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.Typist.xdoc">
+            <summary>
+            The XDoc for the current run
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.Typist.Options">
+            <summary>
+            Options for the current run
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.Typist.MModel">
+            <summary>
+            The meta model for the current run
+            </summary>
+        </member>
+        <member name="F:EdmxTypist.Views.HowToHelp.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Views.HowToHelp.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EdmxTypist.Views.HowToHelp.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EdmxTypist.ModelInfo.EdmxNamesSample">
+            <remarks>
+            Represents a sample of the names found in a file
+            </remarks>
+        </member>
+        <member name="M:EdmxTypist.Model.MetaComplexTypeProperty.Parse(EdmxTypist.Model.MetaModel,EdmxTypist.Model.MetaComplexType,System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <example>
+            Xml example:
+            <![CDATA[
+            	<Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+            ]]>
+            </example>
+            <param name="file"></param>
+            <param name="ct"></param>
+            <param name="prop"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EdmxTypist.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Properties.Resources.not_available_yet_wanna_help">
+            <summary>
+              Looks up a localized string similar to Sorry, not available yet. Wanna help with it? Checkout &quot;How can I help&quot; menu..
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Model.MetaComplexType.Parse(EdmxTypist.Model.MetaModel,System.Xml.Linq.XElement)">
+            <summary>
+            
+            </summary>
+            <example>
+            Xml Example:
+            <![CDATA[
+            	<ComplexType Name="Location">
+            		<Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+            		<Property Type="String" Name="State" MaxLength="50" FixedLength="false" Unicode="true" />
+            		<Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+            	</ComplexType>
+            ]]>
+            </example>
+            <param name="metaModel"></param>
+            <param name="cType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StringExtension.LastPart(System.String,System.Char)">
+            <summary>
+            Returns the last part of a string.
+            </summary>
+            <param name="str">The string</param>
+            <param name="splitter">Optional. Defaults to '.'. The separator char.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StringExtension.Dot(System.String,System.String)">
+            <summary>
+            Adds <paramref name="part"/> to the end of the current string with a "." before it.
+            </summary>
+            <param name="str">The string</param>
+            <param name="part">Part to be added</param>
+            <returns>Concatenated string</returns>
+        </member>
+        <member name="M:StringExtension.Prefix(System.String,System.Char)">
+            <summary>
+            Returns the prefix of the string, i.e. the substring from index 0 to LastIndexOf(<paramref name="splitter"/>)
+            </summary>
+            <param name="str">The string</param>
+            <param name="splitter">Optional. Defaults to '.'. The separator char.</param>
+            <returns>The substring from index 0 to LastIndexOf(<paramref name="splitter"/>)</returns>
+        </member>
+        <member name="T:EdmxTypist.Options.GlobalOptions">
+            <remarks>
+            Holds global options and <see cref="T:EdmxTypist.Options.ContextOptions"/> for each <see cref="T:EdmxTypist.NameContextEnum"/>.
+            </remarks>
+        </member>
+        <member name="M:EdmxTypist.Options.GlobalOptions.#ctor">
+            <summary>
+            Instantiates <see cref="T:EdmxTypist.Options.ContextOptions"/> and set defaults to global options.
+            </summary>
+        </member>
+        <member name="M:EdmxTypist.Options.GlobalOptions.ForContext(EdmxTypist.NameContextEnum)">
+            <summary>
+            Returns an <see cref="T:EdmxTypist.Options.ContextOptions"/> for the received <see cref="T:EdmxTypist.NameContextEnum"/>.
+            </summary>
+            <param name="nameContext">The context to get the options for</param>
+            <returns></returns>
+        </member>
+        <member name="M:EdmxTypist.Options.GlobalOptions.GetOutputPath(System.String)">
+            <summary>
+            Gets the input file path and returns the output file path.
+            The output of this method is determined by two configuration options: 
+            <see cref="P:EdmxTypist.Options.GlobalOptions.ReplaceSourceFileContents"/> and <see cref="P:EdmxTypist.Options.GlobalOptions.OutputFileNamePattern"/>.
+            If <see cref="P:EdmxTypist.Options.GlobalOptions.ReplaceSourceFileContents"/> is <c>true</c> this method returns the value 
+            of <paramref name="inputFilePath"/>. Otherwise it will use <see cref="P:EdmxTypist.Options.GlobalOptions.OutputFileNamePattern"/>
+            to generate a new file name (in the same folder though).
+            </summary>
+            <param name="inputFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.Defaults">
+            <summary>
+            Holds the default options. Useful for applying the same options to many contexts by using <see cref="M:EdmxTypist.Options.ContextOptions.CopyFrom(EdmxTypist.Options.ContextOptions@)"/>.
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.EntitySets">
+            <summary>
+            Options for the <see cref="T:EdmxTypist.NameContextEnum">naming context</see> <see cref="F:EdmxTypist.NameContextEnum.EntitySet"/>
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.EntityTypes">
+            <summary>
+            Options for the <see cref="T:EdmxTypist.NameContextEnum">naming context</see> <see cref="F:EdmxTypist.NameContextEnum.EntityType"/>
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.Associations">
+            <summary>
+            Options for the <see cref="T:EdmxTypist.NameContextEnum">naming context</see> <see cref="F:EdmxTypist.NameContextEnum.AssociationRole"/>
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.ScalarMembers">
+            <summary>
+            Options for the <see cref="T:EdmxTypist.NameContextEnum">naming context</see> <see cref="F:EdmxTypist.NameContextEnum.ScalarProperty"/>
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.ComplexTypes">
+            <summary>
+            Options for the <see cref="T:EdmxTypist.NameContextEnum">naming context</see> <see cref="F:EdmxTypist.NameContextEnum.ComplexType"/>
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.ComplexProps">
+            <summary>
+            Options for the <see cref="T:EdmxTypist.NameContextEnum">naming context</see> <see cref="F:EdmxTypist.NameContextEnum.ComplexProperty"/>
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.Methods">
+            <summary>
+            Options for the <see cref="T:EdmxTypist.NameContextEnum">naming context</see> <see cref="F:EdmxTypist.NameContextEnum.Method"/>
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.NavigationProps">
+            <summary>
+            Options for the <see cref="T:EdmxTypist.NameContextEnum">naming context</see> <see cref="F:EdmxTypist.NameContextEnum.NavigationProperty"/>
+            </summary>
+        </member>
+        <member name="P:EdmxTypist.Options.GlobalOptions.OutputFileNamePattern">
+            <summary>
+            A pattern to specify the name of the output file. Default: {name}-fixed.edmx
+            The pattern may contain the <c>{name}</c> placeholder. In that case, it will be replaced by the name of the original file.
+            </summary>
+            <example>
+            options.OutputFileNamePattern = "fixed-{name}.edmx"
+            // Input file: MyModel.edmx
+            // Output file: fixed-MyModel.edmx
+            </example>
+        </member>
+        <member name="M:EdmxTypist.Renamer.IRenamer.ToPlural(EdmxTypist.NameContextEnum,System.String,System.String,System.String,System.String)">
+            <summary>
+            ToPlural is called whenever a word (entity set/type, or member) needs to be pluralized.
+            </summary>
+            <param name="nameContext">Name context, describes the type of object being named.</param>
+            <param name="word">The word to pluralize.</param>
+            <param name="suggestion">Suggested pluralization of {word}.</param>
+            <param name="text">Entire entity set/type, or member name.</param>
+            <param name="parentName">Name of the parent object (if any).</param>
+            <returns>Pluralization of the word parameter.</returns>
+        </member>
+        <member name="M:EdmxTypist.Renamer.IRenamer.ToSingular(EdmxTypist.NameContextEnum,System.String,System.String,System.String,System.String)">
+            <summary>
+            ToSingular is called whenever a word (entity set/type, or member) needs to be singularized.
+            </summary>
+            <param name="nameContext">Name context, describes the type of object being named.</param>
+            <param name="word">The word to singularize.</param>
+            <param name="suggestion">Suggested singularization of {word}.</param>
+            <param name="text">Entire entity set/type, or member name.</param>
+            <param name="parentName">Name of the parent object (if any).</param>
+            <returns>Singularization of the word parameter.</returns>
+        </member>
+        <member name="M:EdmxTypist.Renamer.DefaultRenamer.ToPlural(EdmxTypist.NameContextEnum,System.String,System.String,System.String,System.String)">
+            <summary>
+            ToPlural is called whenever a word (entity set/type, or member) needs to be pluralized.
+            </summary>
+            <param name="nameContext">Name context, describes the type of object being named.</param>
+            <param name="word">The word to pluralize.</param>
+            <param name="suggestion">Suggested pluralization of {word}.</param>
+            <param name="text">Entire entity set/type, or member name.</param>
+            <param name="parentName">Name of the parent object (if any).</param>
+            <returns>Pluralization of the word parameter.</returns>
+        </member>
+        <member name="M:EdmxTypist.Renamer.DefaultRenamer.ToSingular(EdmxTypist.NameContextEnum,System.String,System.String,System.String,System.String)">
+            <summary>
+            ToSingular is called whenever a word (entity set/type, or member) needs to be singularized.
+            </summary>
+            <param name="nameContext">Name context, describes the type of object being named.</param>
+            <param name="word">The word to singularize.</param>
+            <param name="suggestion">Suggested singularization of {word}.</param>
+            <param name="text">Entire entity set/type, or member name.</param>
+            <param name="parentName">Name of the parent object (if any).</param>
+            <returns>Singularization of the word parameter.</returns>
+        </member>
+        <member name="M:EdmxTypist.Renamer.DefaultRenamer.ApplyRegex(System.String,System.String,System.String)">
+            <summary>
+            Encapsulated Regex.Replace because maybe we'll do fancy stuff around it later
+            </summary>
+        </member>
+    </members>
+</doc>

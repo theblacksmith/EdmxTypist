@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.625, 12.75" name="Activity1">
+  <flowGraphMoniker name="/" />
+  <nestedChildShapes>
+    <actorSwimLane Id="144f3d67-181b-4259-bb96-d19a2447e060" absoluteBounds="0, 0, 12.625, 12.75">
+      <actorMoniker name="//Renamer" />
+      <nestedChildShapes>
+        <taskShape Id="8cca4b98-8bf8-4365-be17-10c097835c52" absoluteBounds="3.25, 1.25, 1.25, 0.375">
+          <taskMoniker name="//Renamer/GetName" />
+        </taskShape>
+        <taskShape Id="dc8d6a91-dd8c-4228-8f3e-a33defaa35e3" absoluteBounds="3.25, 2.375, 1.25, 0.375">
+          <taskMoniker name="//Renamer/BeforeRenaming" />
+        </taskShape>
+        <flowConnector edgePoints="[(3.875 : 1.625); (3.875 : 2.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="8cca4b98-8bf8-4365-be17-10c097835c52" />
+            <taskShapeMoniker Id="dc8d6a91-dd8c-4228-8f3e-a33defaa35e3" />
+          </nodes>
+        </flowConnector>
+        <taskShape Id="238c223a-8f0f-411b-a1a4-8766d6748fe4" absoluteBounds="7.375, 3.5, 1.25, 0.375">
+          <taskMoniker name="//Renamer/Format" />
+        </taskShape>
+        <mergeBranchShape Id="e46b667b-aeab-4b15-994b-fb994b55e498" absoluteBounds="3.75, 3.5, 0.3, 0.5">
+          <mergeBranchMoniker name="//Renamer/MergeBranch1" />
+        </mergeBranchShape>
+        <flowConnector edgePoints="[(4.05 : 3.6875); (7.375 : 3.6875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <mergeBranchShapeMoniker Id="e46b667b-aeab-4b15-994b-fb994b55e498" />
+            <taskShapeMoniker Id="238c223a-8f0f-411b-a1a4-8766d6748fe4" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(3.9 : 2.75); (3.9 : 3.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="dc8d6a91-dd8c-4228-8f3e-a33defaa35e3" />
+            <mergeBranchShapeMoniker Id="e46b667b-aeab-4b15-994b-fb994b55e498" />
+          </nodes>
+        </flowConnector>
+        <taskShape Id="e9af9e35-0c04-4e78-80ed-ddb70e418cfb" absoluteBounds="3.25, 11, 1.25, 0.375">
+          <taskMoniker name="//Renamer/AfterRenaming" />
+        </taskShape>
+        <endShape Id="7962834a-690b-4479-a6c2-96fb4df3890e" absoluteBounds="3.75, 12.25, 0.25, 0.25">
+          <endPointMoniker name="//Renamer/EndPoint1" />
+        </endShape>
+        <startShape Id="70a8ddca-a214-47f0-be05-595d2661c985" absoluteBounds="3.75, 0.5, 0.25, 0.25">
+          <startPointMoniker name="//Renamer/StartPoint1" />
+        </startShape>
+        <flowConnector edgePoints="[(3.875 : 0.75); (3.875 : 1.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <startShapeMoniker Id="70a8ddca-a214-47f0-be05-595d2661c985" />
+            <taskShapeMoniker Id="8cca4b98-8bf8-4365-be17-10c097835c52" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(3.875 : 11.375); (3.875 : 12.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="e9af9e35-0c04-4e78-80ed-ddb70e418cfb" />
+            <endShapeMoniker Id="7962834a-690b-4479-a6c2-96fb4df3890e" />
+          </nodes>
+        </flowConnector>
+        <taskShape Id="f7c98d3c-5bb7-494f-a41f-c525e14940b2" absoluteBounds="4.625, 5.25, 1.25, 0.375">
+          <taskMoniker name="//Renamer/ApplyRegexInstead" />
+        </taskShape>
+        <mergeBranchShape Id="40e2bc76-380e-4cef-81f8-d3dfdaefe703" absoluteBounds="7.875, 4.5, 0.3, 0.5">
+          <mergeBranchMoniker name="//Renamer/MergeBranch2" />
+        </mergeBranchShape>
+        <flowConnector edgePoints="[(8.025 : 3.875); (8.025 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="238c223a-8f0f-411b-a1a4-8766d6748fe4" />
+            <mergeBranchShapeMoniker Id="40e2bc76-380e-4cef-81f8-d3dfdaefe703" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(7.875 : 4.75); (5.25 : 4.75); (5.25 : 5.25)]" fixedFrom="Caller" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <mergeBranchShapeMoniker Id="40e2bc76-380e-4cef-81f8-d3dfdaefe703" />
+            <taskShapeMoniker Id="f7c98d3c-5bb7-494f-a41f-c525e14940b2" />
+          </nodes>
+        </flowConnector>
+        <taskShape Id="93ef4f21-a987-43f3-b322-03c93e30c5c0" absoluteBounds="7.375, 6, 1.25, 0.375">
+          <taskMoniker name="//Renamer/RemovePrefixes" />
+        </taskShape>
+        <taskShape Id="87985c4a-175a-4a86-acfd-7dcde7ff43cb" absoluteBounds="7.375, 6.625, 1.25, 0.375">
+          <taskMoniker name="//Renamer/RemoveSuffixes" />
+        </taskShape>
+        <flowConnector edgePoints="[(8 : 6.375); (8 : 6.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="93ef4f21-a987-43f3-b322-03c93e30c5c0" />
+            <taskShapeMoniker Id="87985c4a-175a-4a86-acfd-7dcde7ff43cb" />
+          </nodes>
+        </flowConnector>
+        <taskShape Id="8e501451-e387-4801-9ca1-882f055625ba" absoluteBounds="7.375, 7.375, 1.25, 0.375">
+          <taskMoniker name="//Renamer/AddPrefix" />
+        </taskShape>
+        <taskShape Id="6c0fd862-6a92-4662-8c6d-889ef28d8539" absoluteBounds="7.375, 8.125, 1.25, 0.375">
+          <taskMoniker name="//Renamer/AddSuffix" />
+        </taskShape>
+        <flowConnector edgePoints="[(8 : 7); (8 : 7.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="87985c4a-175a-4a86-acfd-7dcde7ff43cb" />
+            <taskShapeMoniker Id="8e501451-e387-4801-9ca1-882f055625ba" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(8 : 7.75); (8 : 8.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="8e501451-e387-4801-9ca1-882f055625ba" />
+            <taskShapeMoniker Id="6c0fd862-6a92-4662-8c6d-889ef28d8539" />
+          </nodes>
+        </flowConnector>
+        <taskShape Id="f8d932db-ce7a-4228-b6df-516698a75916" absoluteBounds="7.375, 8.875, 1.25, 0.375">
+          <taskMoniker name="//Renamer/Rename" />
+        </taskShape>
+        <flowConnector edgePoints="[(8 : 8.5); (8 : 8.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="6c0fd862-6a92-4662-8c6d-889ef28d8539" />
+            <taskShapeMoniker Id="f8d932db-ce7a-4228-b6df-516698a75916" />
+          </nodes>
+        </flowConnector>
+        <mergeBranchShape Id="88531a84-7fe1-4dc9-b41c-e488193b33d5" absoluteBounds="6.5, 8.875, 0.3, 0.5">
+          <mergeBranchMoniker name="//Renamer/MergeBranch3" />
+        </mergeBranchShape>
+        <taskShape Id="ff6ccd26-c9ff-4115-9ab9-6c3f09d4f20a" absoluteBounds="4.5, 7.75, 1.25, 0.375">
+          <taskMoniker name="//Renamer/ToPlural" />
+        </taskShape>
+        <taskShape Id="9e5f9a1b-fd83-4d88-aa38-ca6732e523b6" absoluteBounds="4.5, 8.5, 1.25, 0.375">
+          <taskMoniker name="//Renamer/ToSingular" />
+        </taskShape>
+        <flowConnector edgePoints="[(7.375 : 9.09868421052632); (6.8 : 9.09868421052632)]" fixedFrom="Algorithm" fixedTo="Caller" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="f8d932db-ce7a-4228-b6df-516698a75916" />
+            <mergeBranchShapeMoniker Id="88531a84-7fe1-4dc9-b41c-e488193b33d5" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(6.65 : 8.875); (6.65 : 7.9375); (5.75 : 7.9375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <mergeBranchShapeMoniker Id="88531a84-7fe1-4dc9-b41c-e488193b33d5" />
+            <taskShapeMoniker Id="ff6ccd26-c9ff-4115-9ab9-6c3f09d4f20a" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(6.5 : 9.125); (5.01682692307692 : 9.125); (5.01682692307692 : 8.875)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <mergeBranchShapeMoniker Id="88531a84-7fe1-4dc9-b41c-e488193b33d5" />
+            <taskShapeMoniker Id="9e5f9a1b-fd83-4d88-aa38-ca6732e523b6" />
+          </nodes>
+        </flowConnector>
+        <mergeBranchShape Id="12066789-2739-4f76-8cd4-62aa4a8a5fd1" absoluteBounds="7.875, 9.625, 0.3, 0.5">
+          <mergeBranchMoniker name="//Renamer/MergeBranch4" />
+        </mergeBranchShape>
+        <flowConnector edgePoints="[(8.025 : 9.25); (8.025 : 9.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="f8d932db-ce7a-4228-b6df-516698a75916" />
+            <mergeBranchShapeMoniker Id="12066789-2739-4f76-8cd4-62aa4a8a5fd1" />
+          </nodes>
+        </flowConnector>
+        <syncBarShape Id="7706dcab-25d7-4e57-b5cc-1c000369c89d" absoluteBounds="3.375, 10.375, 1, 0.1">
+          <synchronizationMoniker name="//Renamer/Synchronization1" />
+        </syncBarShape>
+        <flowConnector edgePoints="[(8.025 : 10.125); (8.025 : 10.4626470588235); (4.375 : 10.4626470588235)]" fixedFrom="Algorithm" fixedTo="Caller" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <mergeBranchShapeMoniker Id="12066789-2739-4f76-8cd4-62aa4a8a5fd1" />
+            <syncBarShapeMoniker Id="7706dcab-25d7-4e57-b5cc-1c000369c89d" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(3.875 : 4); (3.875 : 10.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <mergeBranchShapeMoniker Id="e46b667b-aeab-4b15-994b-fb994b55e498" />
+            <syncBarShapeMoniker Id="7706dcab-25d7-4e57-b5cc-1c000369c89d" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(4.625 : 5.4375); (4 : 5.4375); (4 : 10.375)]" fixedFrom="Algorithm" fixedTo="Caller" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <taskShapeMoniker Id="f7c98d3c-5bb7-494f-a41f-c525e14940b2" />
+            <syncBarShapeMoniker Id="7706dcab-25d7-4e57-b5cc-1c000369c89d" />
+          </nodes>
+        </flowConnector>
+        <taskShape Id="2aec7558-a65a-4e4f-812b-af2627b13201" absoluteBounds="10.375, 9.625, 1.25, 0.375">
+          <taskMoniker name="//Renamer/ApplyRegexAfter" />
+        </taskShape>
+        <taskShape Id="20131fc9-52df-4cb9-a7b5-889ba80cc33d" absoluteBounds="10.25, 4.5, 1.25, 0.375">
+          <taskMoniker name="//Renamer/ApplyRegexBefore" />
+        </taskShape>
+        <flowConnector edgePoints="[(8.175 : 9.8125); (10.375 : 9.8125)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <mergeBranchShapeMoniker Id="12066789-2739-4f76-8cd4-62aa4a8a5fd1" />
+            <taskShapeMoniker Id="2aec7558-a65a-4e4f-812b-af2627b13201" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(8.175 : 4.6875); (10.25 : 4.6875)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <mergeBranchShapeMoniker Id="40e2bc76-380e-4cef-81f8-d3dfdaefe703" />
+            <taskShapeMoniker Id="20131fc9-52df-4cb9-a7b5-889ba80cc33d" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(8.025 : 5); (8.025 : 6)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <mergeBranchShapeMoniker Id="40e2bc76-380e-4cef-81f8-d3dfdaefe703" />
+            <taskShapeMoniker Id="93ef4f21-a987-43f3-b322-03c93e30c5c0" />
+          </nodes>
+        </flowConnector>
+        <flowConnector edgePoints="[(3.875 : 10.475); (3.875 : 11)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="d88f82a4-64e1-4cdf-96b6-ce70285da691">
+          <relativeChildShapes />
+          <nodes>
+            <syncBarShapeMoniker Id="7706dcab-25d7-4e57-b5cc-1c000369c89d" />
+            <taskShapeMoniker Id="e9af9e35-0c04-4e78-80ed-ddb70e418cfb" />
+          </nodes>
+        </flowConnector>
+      </nestedChildShapes>
+    </actorSwimLane>
+  </nestedChildShapes>
+</activityDiagram>

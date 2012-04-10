@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+	<!-- SSDL content -->
+	<edmx:StorageModels>
+	<Schema Namespace="MinModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+		<EntityContainer Name="MinModelStoreContainer">
+		  <EntitySet Name="blog_comentarios_users" EntityType="MinModel.Store.blog_comentarios_users" store:Type="Tables" Schema="dbo" />
+		  <EntitySet Name="usuarios" EntityType="MinModel.Store.usuarios" store:Type="Tables" Schema="dbo" />
+		</EntityContainer>
+		<EntityType Name="blog_comentarios_users">
+		  <Key>
+			<PropertyRef Name="blog_comentario_id" />
+			<PropertyRef Name="blog_post_id" />
+		  </Key>
+		  <Property Name="blog_comentario_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+		  <Property Name="blog_post_id" Type="int" Nullable="false" />
+		  <Property Name="user_id" Type="int" Nullable="false" />
+		  <Property Name="comentario" Type="ntext" Nullable="false" />
+		  <Property Name="aprovado" Type="tinyint" Nullable="false" />
+		  <Property Name="data_ins" Type="datetime" Nullable="false" />
+		  <Property Name="pai_blog_comentario_id" Type="int" />
+		  <Property Name="pai_blog_post_id" Type="int" />
+		</EntityType>
+		<EntityType Name="usuarios">
+		  <Key>
+			<PropertyRef Name="user_id" />
+		  </Key>
+		  <Property Name="user_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+		  <Property Name="senha" Type="varchar" MaxLength="30" />
+		  <Property Name="username" Type="varchar" Nullable="false" MaxLength="30" />
+		  <Property Name="data_ins" Type="smalldatetime" Nullable="false" />
+		  <Property Name="descricao" Type="varchar" MaxLength="1000" />
+		  <Property Name="nome" Type="varchar" Nullable="false" MaxLength="150" />
+		  <Property Name="url" Type="varchar" MaxLength="200" />
+		  <Property Name="email" Type="varchar" Nullable="false" MaxLength="150" />
+		  <Property Name="mostrar_perfil" Type="tinyint" />
+		  <Property Name="recebe_news" Type="tinyint" Nullable="false" />
+		  <Property Name="hometown" Type="varchar" MaxLength="60" />
+		  <Property Name="pais_id" Type="int" Nullable="false" />
+		  <Property Name="saldo_pontos" Type="money" Nullable="false" />
+		  <Property Name="foto_status" Type="varchar" Nullable="false" MaxLength="15" />
+		  <Property Name="yahoo" Type="varchar" MaxLength="150" />
+		  <Property Name="icq" Type="varchar" MaxLength="30" />
+		  <Property Name="messenger" Type="varchar" MaxLength="150" />
+		  <Property Name="sexo" Type="varchar" MaxLength="1" />
+		  <Property Name="data_nasc" Type="smalldatetime" />
+		  <Property Name="aol" Type="varchar" MaxLength="150" />
+		  <Property Name="ocupacao" Type="varchar" MaxLength="150" />
+		  <Property Name="telefone" Type="varchar" MaxLength="20" />
+		  <Property Name="favorecido" Type="varchar" MaxLength="150" />
+		  <Property Name="conta" Type="varchar" MaxLength="20" />
+		  <Property Name="agencia" Type="varchar" MaxLength="20" />
+		  <Property Name="banco" Type="smallint" />
+		  <Property Name="aceitou_receber_news" Type="tinyint" />
+		  <Property Name="grau_premio" Type="tinyint" Nullable="false" />
+		  <Property Name="convidado" Type="tinyint" Nullable="false" />
+		  <Property Name="qtd_visualizacoes" Type="int" Nullable="false" />
+		  <Property Name="veiculo_id" Type="int" />
+		  <Property Name="indicador_user_id" Type="int" />
+		  <Property Name="clubevip" Type="tinyint" Nullable="false" />
+		  <Property Name="pode_blogar_novidades" Type="tinyint" Nullable="false" />
+		  <Property Name="fretegratis" Type="tinyint" Nullable="false" />
+		  <Property Name="googletalk" Type="varchar" MaxLength="150" />
+		  <Property Name="fundador" Type="tinyint" Nullable="false" />
+		  <Property Name="parceiro_id" Type="int" />
+		  <Property Name="ativo" Type="tinyint" Nullable="false" />
+		  <Property Name="fake" Type="tinyint" Nullable="false" />
+		  <Property Name="recebe_aviso_scrap" Type="tinyint" />
+		  <Property Name="recebe_aviso_blog" Type="tinyint" />
+		  <Property Name="recebe_aviso_comentario" Type="tinyint" />
+		  <Property Name="mes_ins" Type="smalldatetime" Nullable="false" />
+		  <Property Name="email_validado_nivel1" Type="tinyint" />
+		  <Property Name="email_validado_nivel2" Type="tinyint" />
+		  <Property Name="ip" Type="varchar" MaxLength="15" />
+		  <Property Name="ranking" Type="float" />
+		  <Property Name="online" Type="tinyint" Nullable="false" />
+		  <Property Name="opensocial_personid" Type="varchar" MaxLength="150" />
+		  <Property Name="opensocial_container" Type="varchar" MaxLength="30" />
+		  <Property Name="recebe_promocoes" Type="tinyint" Nullable="false" />
+		  <Property Name="referrer" Type="varchar" MaxLength="300" />
+		  <Property Name="email_bouncing" Type="tinyint" Nullable="false" />
+		  <Property Name="senha2" Type="varchar" Nullable="false" MaxLength="60" />
+		  <Property Name="checkGuid" Type="varchar" MaxLength="50" />
+		  <Property Name="twitter" Type="varchar" MaxLength="150" />
+		  <Property Name="facebook_uid" Type="bigint" />
+		  <Property Name="documento" Type="varchar" MaxLength="25" />
+		  <Property Name="twitter_oauth_token" Type="varchar" MaxLength="150" />
+		  <Property Name="twitter_oauth_token_secret" Type="varchar" MaxLength="150" />
+		  <Property Name="twitter_oauth_screen_name" Type="varchar" MaxLength="150" />
+		  <Property Name="twitter_oauth_user_id" Type="int" />
+		  <Property Name="convidado_facebook" Type="tinyint" />
+		  <Property Name="canal_veiculo_id" Type="int" />
+		  <Property Name="designs_aprovados" Type="smallint" />
+		  <Property Name="staff" Type="tinyint" />
+		  <Property Name="suspeita_fraude" Type="tinyint" />
+		  <Property Name="fraudulento" Type="tinyint" />
+		  <Property Name="confiavel" Type="tinyint" Nullable="false" />
+		  <Property Name="reset_senha_guid" Type="varchar" MaxLength="50" />
+		  <Property Name="validade_reset_senha" Type="smalldatetime" />
+		  <Property Name="recebe_votou" Type="tinyint" />
+		  <Property Name="data_ultima_visita_bb" Type="datetime" />
+		  <Property Name="data_ultima_visita_dbb" Type="datetime" />
+		  <Property Name="loja_id" Type="int" />
+		</EntityType>
+	  </Schema></edmx:StorageModels>
+	<!-- CSDL content -->
+	<edmx:ConceptualModels>
+	  <Schema Namespace="MinModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+		<EntityContainer Name="camiseteriaEntities" annotation:LazyLoadingEnabled="true">
+		  <EntitySet Name="blog_comentarios_users" EntityType="MinModel.BlogComentariosUsers" />
+		  <EntitySet Name="usuarios" EntityType="MinModel.usuarios" />
+		  <AssociationSet Name="usuariosBlogComentariosUsers" Association="MinModel.usuariosBlogComentariosUsers">
+			<End Role="Usuario" EntitySet="usuarios" />
+			<End Role="BlogComentarios" EntitySet="blog_comentarios_users" />
+		  </AssociationSet>
+		</EntityContainer>
+		<EntityType Name="BlogComentariosUsers">
+		  <Key>
+			<PropertyRef Name="BlogComentarioId" />
+			<PropertyRef Name="BlogPostId" />
+		  </Key>
+		  <Property Name="BlogComentarioId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+		  <Property Name="BlogPostId" Type="Int32" Nullable="false" />
+		  <Property Name="UserId" Type="Int32" Nullable="false" />
+		  <Property Name="Comentario" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+		  <Property Name="Aprovado" Type="Byte" Nullable="false" />
+		  <Property Name="DataIns" Type="DateTime" Nullable="false" />
+		  <Property Name="PaiBlogComentarioId" Type="Int32" />
+		  <Property Name="PaiBlogPostId" Type="Int32" />
+		  <NavigationProperty Name="UsuarioXXX" Relationship="MinModel.usuariosBlogComentariosUsers" FromRole="BlogComentarios" ToRole="Usuario" />
+		</EntityType>
+		<EntityType Name="usuarios">
+		  <Key>
+			<PropertyRef Name="user_id" />
+		  </Key>
+		  <Property Type="Int32" Name="user_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+		  <Property Type="String" Name="senha" MaxLength="30" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="username" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+		  <Property Type="DateTime" Name="data_ins" Nullable="false" />
+		  <Property Type="String" Name="descricao" MaxLength="1000" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="nome" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="url" MaxLength="200" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="email" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="Byte" Name="mostrar_perfil" />
+		  <Property Type="Byte" Name="recebe_news" Nullable="false" />
+		  <Property Type="String" Name="hometown" MaxLength="60" FixedLength="false" Unicode="false" />
+		  <Property Type="Int32" Name="pais_id" Nullable="false" />
+		  <Property Type="Decimal" Name="saldo_pontos" Nullable="false" Precision="19" Scale="4" />
+		  <Property Type="String" Name="foto_status" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="yahoo" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="icq" MaxLength="30" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="messenger" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="sexo" MaxLength="1" FixedLength="false" Unicode="false" />
+		  <Property Type="DateTime" Name="data_nasc" />
+		  <Property Type="String" Name="aol" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="ocupacao" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="telefone" MaxLength="20" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="favorecido" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="conta" MaxLength="20" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="agencia" MaxLength="20" FixedLength="false" Unicode="false" />
+		  <Property Type="Int16" Name="banco" />
+		  <Property Type="Byte" Name="aceitou_receber_news" />
+		  <Property Type="Byte" Name="grau_premio" Nullable="false" />
+		  <Property Type="Byte" Name="convidado" Nullable="false" />
+		  <Property Type="Int32" Name="qtd_visualizacoes" Nullable="false" />
+		  <Property Type="Int32" Name="veiculo_id" />
+		  <Property Type="Int32" Name="indicador_user_id" />
+		  <Property Type="Byte" Name="clubevip" Nullable="false" />
+		  <Property Type="Byte" Name="pode_blogar_novidades" Nullable="false" />
+		  <Property Type="Byte" Name="fretegratis" Nullable="false" />
+		  <Property Type="String" Name="googletalk" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="Byte" Name="fundador" Nullable="false" />
+		  <Property Type="Int32" Name="parceiro_id" />
+		  <Property Type="Byte" Name="ativo" Nullable="false" />
+		  <Property Type="Byte" Name="fake" Nullable="false" />
+		  <Property Type="Byte" Name="recebe_aviso_scrap" />
+		  <Property Type="Byte" Name="recebe_aviso_blog" />
+		  <Property Type="Byte" Name="recebe_aviso_comentario" />
+		  <Property Type="DateTime" Name="mes_ins" Nullable="false" />
+		  <Property Type="Byte" Name="email_validado_nivel1" />
+		  <Property Type="Byte" Name="email_validado_nivel2" />
+		  <Property Type="String" Name="ip" MaxLength="15" FixedLength="false" Unicode="false" />
+		  <Property Type="Double" Name="ranking" />
+		  <Property Type="Byte" Name="online" Nullable="false" />
+		  <Property Type="String" Name="opensocial_personid" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="opensocial_container" MaxLength="30" FixedLength="false" Unicode="false" />
+		  <Property Type="Byte" Name="recebe_promocoes" Nullable="false" />
+		  <Property Type="String" Name="referrer" MaxLength="300" FixedLength="false" Unicode="false" />
+		  <Property Type="Byte" Name="email_bouncing" Nullable="false" />
+		  <Property Type="String" Name="senha2" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="checkGuid" MaxLength="50" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="twitter" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="Int64" Name="facebook_uid" />
+		  <Property Type="String" Name="documento" MaxLength="25" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="twitter_oauth_token" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="twitter_oauth_token_secret" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="String" Name="twitter_oauth_screen_name" MaxLength="150" FixedLength="false" Unicode="false" />
+		  <Property Type="Int32" Name="twitter_oauth_user_id" />
+		  <Property Type="Byte" Name="convidado_facebook" />
+		  <Property Type="Int32" Name="canal_veiculo_id" />
+		  <Property Type="Int16" Name="designs_aprovados" />
+		  <Property Type="Byte" Name="staff" />
+		  <Property Type="Byte" Name="suspeita_fraude" />
+		  <Property Type="Byte" Name="fraudulento" />
+		  <Property Type="Byte" Name="confiavel" Nullable="false" />
+		  <Property Type="String" Name="reset_senha_guid" MaxLength="50" FixedLength="false" Unicode="false" />
+		  <Property Type="DateTime" Name="validade_reset_senha" />
+		  <Property Type="Byte" Name="recebe_votou" />
+		  <Property Type="DateTime" Name="data_ultima_visita_bb" />
+		  <Property Type="DateTime" Name="data_ultima_visita_dbb" />
+		  <Property Type="Int32" Name="loja_id" />
+		  <NavigationProperty Name="BlogComentariosXXX" Relationship="MinModel.usuariosBlogComentariosUsers" FromRole="Usuario" ToRole="BlogComentarios" />
+		</EntityType>
+		<Association Name="usuariosBlogComentariosUsers">
+		  <End Type="MinModel.usuarios" Role="Usuario" Multiplicity="1" />
+		  <End Type="MinModel.BlogComentariosUsers" Role="BlogComentarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="BlogComentarios">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+		</Association>
+	  </Schema>
+	</edmx:ConceptualModels>
+	<!-- C-S mapping content -->
+	<edmx:Mappings>
+	  <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+		<EntityContainerMapping StorageEntityContainer="MinModelStoreContainer" CdmEntityContainer="camiseteriaEntities">
+		  <EntitySetMapping Name="blog_comentarios_users">
+			<EntityTypeMapping TypeName="MinModel.BlogComentariosUsers">
+				<MappingFragment StoreEntitySet="blog_comentarios_users">
+					<ScalarProperty Name="BlogComentarioId" ColumnName="blog_comentario_id" />
+					<ScalarProperty Name="BlogPostId" ColumnName="blog_post_id" />
+					<ScalarProperty Name="UserId" ColumnName="user_id" />
+					<ScalarProperty Name="Comentario" ColumnName="comentario" />
+					<ScalarProperty Name="Aprovado" ColumnName="aprovado" />
+					<ScalarProperty Name="DataIns" ColumnName="data_ins" />
+					<ScalarProperty Name="PaiBlogComentarioId" ColumnName="pai_blog_comentario_id" />
+					<ScalarProperty Name="PaiBlogPostId" ColumnName="pai_blog_post_id" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		  </EntitySetMapping>
+		  <EntitySetMapping Name="usuarios">
+			<EntityTypeMapping TypeName="MinModel.usuarios">
+			  <MappingFragment StoreEntitySet="usuarios">
+				<ScalarProperty Name="loja_id" ColumnName="loja_id" />
+				<ScalarProperty Name="data_ultima_visita_dbb" ColumnName="data_ultima_visita_dbb" />
+				<ScalarProperty Name="data_ultima_visita_bb" ColumnName="data_ultima_visita_bb" />
+				<ScalarProperty Name="recebe_votou" ColumnName="recebe_votou" />
+				<ScalarProperty Name="validade_reset_senha" ColumnName="validade_reset_senha" />
+				<ScalarProperty Name="reset_senha_guid" ColumnName="reset_senha_guid" />
+				<ScalarProperty Name="confiavel" ColumnName="confiavel" />
+				<ScalarProperty Name="fraudulento" ColumnName="fraudulento" />
+				<ScalarProperty Name="suspeita_fraude" ColumnName="suspeita_fraude" />
+				<ScalarProperty Name="staff" ColumnName="staff" />
+				<ScalarProperty Name="designs_aprovados" ColumnName="designs_aprovados" />
+				<ScalarProperty Name="canal_veiculo_id" ColumnName="canal_veiculo_id" />
+				<ScalarProperty Name="convidado_facebook" ColumnName="convidado_facebook" />
+				<ScalarProperty Name="twitter_oauth_user_id" ColumnName="twitter_oauth_user_id" />
+				<ScalarProperty Name="twitter_oauth_screen_name" ColumnName="twitter_oauth_screen_name" />
+				<ScalarProperty Name="twitter_oauth_token_secret" ColumnName="twitter_oauth_token_secret" />
+				<ScalarProperty Name="twitter_oauth_token" ColumnName="twitter_oauth_token" />
+				<ScalarProperty Name="documento" ColumnName="documento" />
+				<ScalarProperty Name="facebook_uid" ColumnName="facebook_uid" />
+				<ScalarProperty Name="twitter" ColumnName="twitter" />
+				<ScalarProperty Name="checkGuid" ColumnName="checkGuid" />
+				<ScalarProperty Name="senha2" ColumnName="senha2" />
+				<ScalarProperty Name="email_bouncing" ColumnName="email_bouncing" />
+				<ScalarProperty Name="referrer" ColumnName="referrer" />
+				<ScalarProperty Name="recebe_promocoes" ColumnName="recebe_promocoes" />
+				<ScalarProperty Name="opensocial_container" ColumnName="opensocial_container" />
+				<ScalarProperty Name="opensocial_personid" ColumnName="opensocial_personid" />
+				<ScalarProperty Name="online" ColumnName="online" />
+				<ScalarProperty Name="ranking" ColumnName="ranking" />
+				<ScalarProperty Name="ip" ColumnName="ip" />
+				<ScalarProperty Name="email_validado_nivel2" ColumnName="email_validado_nivel2" />
+				<ScalarProperty Name="email_validado_nivel1" ColumnName="email_validado_nivel1" />
+				<ScalarProperty Name="mes_ins" ColumnName="mes_ins" />
+				<ScalarProperty Name="recebe_aviso_comentario" ColumnName="recebe_aviso_comentario" />
+				<ScalarProperty Name="recebe_aviso_blog" ColumnName="recebe_aviso_blog" />
+				<ScalarProperty Name="recebe_aviso_scrap" ColumnName="recebe_aviso_scrap" />
+				<ScalarProperty Name="fake" ColumnName="fake" />
+				<ScalarProperty Name="ativo" ColumnName="ativo" />
+				<ScalarProperty Name="parceiro_id" ColumnName="parceiro_id" />
+				<ScalarProperty Name="fundador" ColumnName="fundador" />
+				<ScalarProperty Name="googletalk" ColumnName="googletalk" />
+				<ScalarProperty Name="fretegratis" ColumnName="fretegratis" />
+				<ScalarProperty Name="pode_blogar_novidades" ColumnName="pode_blogar_novidades" />
+				<ScalarProperty Name="clubevip" ColumnName="clubevip" />
+				<ScalarProperty Name="indicador_user_id" ColumnName="indicador_user_id" />
+				<ScalarProperty Name="veiculo_id" ColumnName="veiculo_id" />
+				<ScalarProperty Name="qtd_visualizacoes" ColumnName="qtd_visualizacoes" />
+				<ScalarProperty Name="convidado" ColumnName="convidado" />
+				<ScalarProperty Name="grau_premio" ColumnName="grau_premio" />
+				<ScalarProperty Name="aceitou_receber_news" ColumnName="aceitou_receber_news" />
+				<ScalarProperty Name="banco" ColumnName="banco" />
+				<ScalarProperty Name="agencia" ColumnName="agencia" />
+				<ScalarProperty Name="conta" ColumnName="conta" />
+				<ScalarProperty Name="favorecido" ColumnName="favorecido" />
+				<ScalarProperty Name="telefone" ColumnName="telefone" />
+				<ScalarProperty Name="ocupacao" ColumnName="ocupacao" />
+				<ScalarProperty Name="aol" ColumnName="aol" />
+				<ScalarProperty Name="data_nasc" ColumnName="data_nasc" />
+				<ScalarProperty Name="sexo" ColumnName="sexo" />
+				<ScalarProperty Name="messenger" ColumnName="messenger" />
+				<ScalarProperty Name="icq" ColumnName="icq" />
+				<ScalarProperty Name="yahoo" ColumnName="yahoo" />
+				<ScalarProperty Name="foto_status" ColumnName="foto_status" />
+				<ScalarProperty Name="saldo_pontos" ColumnName="saldo_pontos" />
+				<ScalarProperty Name="pais_id" ColumnName="pais_id" />
+				<ScalarProperty Name="hometown" ColumnName="hometown" />
+				<ScalarProperty Name="recebe_news" ColumnName="recebe_news" />
+				<ScalarProperty Name="mostrar_perfil" ColumnName="mostrar_perfil" />
+				<ScalarProperty Name="email" ColumnName="email" />
+				<ScalarProperty Name="url" ColumnName="url" />
+				<ScalarProperty Name="nome" ColumnName="nome" />
+				<ScalarProperty Name="descricao" ColumnName="descricao" />
+				<ScalarProperty Name="data_ins" ColumnName="data_ins" />
+				<ScalarProperty Name="username" ColumnName="username" />
+				<ScalarProperty Name="senha" ColumnName="senha" />
+				<ScalarProperty Name="user_id" ColumnName="user_id" />
+			  </MappingFragment>
+			</EntityTypeMapping>
+		  </EntitySetMapping>
+		</EntityContainerMapping>
+	  </Mapping>
+	</edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+	<Connection>
+	  <DesignerInfoPropertySet>
+		<DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+	  </DesignerInfoPropertySet>
+	</Connection>
+	<Options>
+	  <DesignerInfoPropertySet>
+		<DesignerProperty Name="ValidateOnBuild" Value="true" />
+		<DesignerProperty Name="EnablePluralization" Value="False" />
+		<DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+	  </DesignerInfoPropertySet>
+	</Options>
+	<!-- Diagram content (shape and connector positions) -->
+	<Diagrams>
+	  <Diagram Name="min">
+		<EntityTypeShape EntityType="MinModel.BlogComentariosUsers" Width="1.875" PointX="0.75" PointY="0.75" Height="2.5571907552083335" IsExpanded="true" />
+		<EntityTypeShape EntityType="MinModel.usuarios" Width="1.5" PointX="3.875" PointY="0.75" Height="15.633688151041667" />
+		<AssociationConnector Association="MinModel.usuariosBlogComentariosUsers">
+		  <ConnectorPoint PointX="3.875" PointY="2.12474609375" />
+		  <ConnectorPoint PointX="2.625" PointY="2.12474609375" />
+		</AssociationConnector>
+	  </Diagram>
+	</Diagrams>
+  </Designer>
+</edmx:Edmx>

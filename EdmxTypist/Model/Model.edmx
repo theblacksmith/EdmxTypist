@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    </EntityContainer>
+  </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="MetaContext" annotation:LazyLoadingEnabled="true">
+          <AssociationSet Name="MetaEntitySetMetaEntityType" Association="Model.MetaEntitySetMetaEntityType">
+            <End Role="MetaEntitySet" EntitySet="RenameableObjects" />
+            <End Role="MetaEntityType" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <AssociationSet Name="MetaEntityTypeMetaAssociationRole" Association="Model.MetaEntityTypeMetaAssociationRole">
+            <End Role="MetaEntityType" EntitySet="RenameableObjects" />
+            <End Role="MetaAssociationRole" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <AssociationSet Name="MetaEntityTypeMetaComplexProperty" Association="Model.MetaEntityTypeMetaComplexProperty">
+            <End Role="MetaEntityType" EntitySet="RenameableObjects" />
+            <End Role="MetaComplexProperty" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <AssociationSet Name="MetaComplexPropertyMetaComplexType" Association="Model.MetaComplexPropertyMetaComplexType">
+            <End EntitySet="RenameableObjects" Role="ComplexProperty" />
+            <End EntitySet="RenameableObjects" Role="ComplexType" />
+          </AssociationSet>
+          <AssociationSet Name="MetaNavigationPropertyMetaAssociationRole" Association="Model.MetaNavigationPropertyMetaAssociationRole">
+            <End Role="MetaNavigationProperty" EntitySet="RenameableObjects" />
+            <End Role="MetaAssociationRole" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <AssociationSet Name="MetaEntityTypeMetaMethod" Association="Model.MetaEntityTypeMetaMethod">
+            <End Role="MetaEntityType" EntitySet="RenameableObjects" />
+            <End Role="MetaMethod" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <EntitySet Name="MetaEntitySetStores" EntityType="Model.MetaEntitySetStore" />
+          <AssociationSet Name="MetaEntitySetMetaEntitySetStor" Association="Model.MetaEntitySetMetaEntitySetStor">
+            <End Role="MetaEntitySet" EntitySet="RenameableObjects" />
+            <End Role="MetaEntitySetStor" EntitySet="MetaEntitySetStores" />
+          </AssociationSet>
+          <EntitySet Name="MetaPropertyStores" EntityType="Model.MetaPropertyStore" />
+          <EntitySet Name="MetaEntityTypeStores" EntityType="Model.MetaEntityTypeStore" />
+          <AssociationSet Name="MetaEntityTypeMetaEntityTypeStore" Association="Model.MetaEntityTypeMetaEntityTypeStore">
+            <End Role="MetaEntityType" EntitySet="RenameableObjects" />
+            <End Role="MetaEntityTypeStore" EntitySet="MetaEntityTypeStores" />
+          </AssociationSet>
+          <AssociationSet Name="MetaEntitySetStoreMetaEntityTypeStore" Association="Model.MetaEntitySetStoreMetaEntityTypeStore">
+            <End Role="MetaEntitySetStore" EntitySet="MetaEntitySetStores" />
+            <End Role="MetaEntityTypeStore" EntitySet="MetaEntityTypeStores" />
+          </AssociationSet>
+          <AssociationSet Name="MetaEntityTypeStoreMetaPropertyStore" Association="Model.MetaEntityTypeStoreMetaPropertyStore">
+            <End Role="MetaEntityTypeStore" EntitySet="MetaEntityTypeStores" />
+            <End Role="MetaPropertyStore" EntitySet="MetaPropertyStores" />
+          </AssociationSet>
+          <AssociationSet Name="MetaEntityTypeMetaScalarProperty" Association="Model.MetaEntityTypeMetaScalarProperty">
+            <End Role="MetaEntityType" EntitySet="RenameableObjects" />
+            <End Role="MetaScalarProperty" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <EntitySet Name="MetaScalarPropertyMaps" EntityType="Model.MetaScalarPropertyMap" />
+          <AssociationSet Name="MetaComplexPropertyMetaScalarPropertyMap" Association="Model.MetaComplexPropertyMetaScalarPropertyMap">
+            <End Role="MetaComplexProperty" EntitySet="RenameableObjects" />
+            <End Role="MetaScalarPropertyMap" EntitySet="MetaScalarPropertyMaps" />
+          </AssociationSet>
+          <AssociationSet Name="MetaComplexTypeMetaComplexTypeProperty" Association="Model.MetaComplexTypeMetaComplexTypeProperty">
+            <End Role="MetaComplexType" EntitySet="RenameableObjects" />
+            <End Role="MetaComplexTypeProperty" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <AssociationSet Name="MetaScalarPropertyMapMetaComplexTypeProperty" Association="Model.MetaScalarPropertyMapMetaComplexTypeProperty">
+            <End Role="MetaScalarPropertyMap" EntitySet="MetaScalarPropertyMaps" />
+            <End Role="MetaComplexTypeProperty" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <AssociationSet Name="MetaScalarPropertyMapMetaPropertyStore" Association="Model.MetaScalarPropertyMapMetaPropertyStore">
+            <End Role="MetaScalarPropertyMap" EntitySet="MetaScalarPropertyMaps" />
+            <End Role="MetaPropertyStore" EntitySet="MetaPropertyStores" />
+          </AssociationSet>
+          <AssociationSet Name="MetaScalarPropertyMetaPropertyStore" Association="Model.MetaScalarPropertyMetaPropertyStore">
+            <End Role="MetaScalarProperty" EntitySet="RenameableObjects" />
+            <End Role="MetaPropertyStore" EntitySet="MetaPropertyStores" />
+          </AssociationSet>
+          <AssociationSet Name="MetaComplexTypePropertyMetaPropertyStore" Association="Model.MetaComplexTypePropertyMetaPropertyStore">
+            <End Role="MetaComplexTypeProperty" EntitySet="RenameableObjects" />
+            <End Role="MetaPropertyStore" EntitySet="MetaPropertyStores" />
+          </AssociationSet>
+          <AssociationSet Name="MetaContainerMetaEntitySet" Association="Model.MetaContainerMetaEntitySet">
+            <End Role="MetaContainer" EntitySet="RenameableObjects" />
+            <End Role="MetaEntitySet" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <EntitySet Name="MetaContainerStores" EntityType="Model.MetaContainerStore" />
+          <AssociationSet Name="MetaContainerMetaContainerStore" Association="Model.MetaContainerMetaContainerStore">
+            <End Role="MetaContainer" EntitySet="RenameableObjects" />
+            <End Role="MetaContainerStore" EntitySet="MetaContainerStores" />
+          </AssociationSet>
+          <EntitySet Name="MetaAssociationSets" EntityType="Model.MetaAssociationSet" />
+          <AssociationSet Name="MetaAssociationSetMetaAssociationRole" Association="Model.MetaAssociationSetMetaAssociationRole">
+            <End Role="MetaAssociationSet" EntitySet="MetaAssociationSets" />
+            <End Role="MetaAssociationRole" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <AssociationSet Name="MetaAssociationSetMetaAssociationRole1" Association="Model.MetaAssociationSetMetaAssociationRole1">
+            <End Role="MetaAssociationSet" EntitySet="MetaAssociationSets" />
+            <End Role="MetaAssociationRole" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          <AssociationSet Name="MetaContainerMetaAssociationSet" Association="Model.MetaContainerMetaAssociationSet">
+            <End Role="MetaContainer" EntitySet="RenameableObjects" />
+            <End Role="MetaAssociationSet" EntitySet="MetaAssociationSets" />
+          </AssociationSet>
+          <EntitySet Name="RenameableObjects" EntityType="Model.RenameableObject" />
+          <AssociationSet Name="MetaEntityTypeMetaNavigationProperty" Association="Model.MetaEntityTypeMetaNavigationProperty">
+            <End Role="MetaEntityType" EntitySet="RenameableObjects" />
+            <End Role="MetaNavigationProperty" EntitySet="RenameableObjects" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="MetaEntityType" BaseType="Model.RenameableObject">
+          <Documentation>
+            <Summary>Stores info about an EntityType</Summary>
+          </Documentation>
+          <NavigationProperty Name="EntitySet" Relationship="Model.MetaEntitySetMetaEntityType" FromRole="MetaEntityType" ToRole="MetaEntitySet" >
+            <Documentation>
+              <Summary>The MetaEntitySet info for the EntitySet this Entity belongs to</Summary>
+            </Documentation>
+          </NavigationProperty>
+          <NavigationProperty Name="AssociationRoles" Relationship="Model.MetaEntityTypeMetaAssociationRole" FromRole="MetaEntityType" ToRole="MetaAssociationRole" />
+          <NavigationProperty Name="ComplexProperties" Relationship="Model.MetaEntityTypeMetaComplexProperty" FromRole="MetaEntityType" ToRole="MetaComplexProperty" />
+          <NavigationProperty Name="Methods" Relationship="Model.MetaEntityTypeMetaMethod" FromRole="MetaEntityType" ToRole="MetaMethod" />
+          <NavigationProperty Name="Store" Relationship="Model.MetaEntityTypeMetaEntityTypeStore" FromRole="MetaEntityType" ToRole="MetaEntityTypeStore" />
+          <NavigationProperty Name="Properties" Relationship="Model.MetaEntityTypeMetaScalarProperty" FromRole="MetaEntityType" ToRole="MetaScalarProperty" />
+          <NavigationProperty Name="NavigationProperties" Relationship="Model.MetaEntityTypeMetaNavigationProperty" FromRole="MetaEntityType" ToRole="MetaNavigationProperty" />
+        </EntityType>
+        <EntityType Name="MetaEntitySet" BaseType="Model.RenameableObject">
+          <NavigationProperty Name="EntityType" Relationship="Model.MetaEntitySetMetaEntityType" FromRole="MetaEntitySet" ToRole="MetaEntityType" />
+          <NavigationProperty Name="Store" Relationship="Model.MetaEntitySetMetaEntitySetStor" FromRole="MetaEntitySet" ToRole="MetaEntitySetStor" />
+          <NavigationProperty Name="Container" Relationship="Model.MetaContainerMetaEntitySet" FromRole="MetaEntitySet" ToRole="MetaContainer" />
+        </EntityType>
+        <Association Name="MetaEntitySetMetaEntityType">
+          <End Type="Model.MetaEntitySet" Role="MetaEntitySet" Multiplicity="1" />
+          <End Type="Model.MetaEntityType" Role="MetaEntityType" Multiplicity="1" />
+        </Association>
+        <EntityType Name="MetaScalarProperty" Abstract="false" BaseType="Model.RenameableObject">
+          <Property Type="String" Name="Type" Nullable="false" />
+          <Property Type="Boolean" Name="Nullable" Nullable="false" />
+          <Property Type="Boolean" Name="isKey" Nullable="false" />
+          <NavigationProperty Name="EntityType" Relationship="Model.MetaEntityTypeMetaScalarProperty" FromRole="MetaScalarProperty" ToRole="MetaEntityType" />
+          <NavigationProperty Name="Store" Relationship="Model.MetaScalarPropertyMetaPropertyStore" FromRole="MetaScalarProperty" ToRole="MetaPropertyStore" />
+          <Property Type="String" Name="EntityTypeFullName" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MetaAssociationRole" BaseType="Model.RenameableObject">
+          <NavigationProperty Name="ToEntityType" Relationship="Model.MetaEntityTypeMetaAssociationRole" FromRole="MetaAssociationRole" ToRole="MetaEntityType" />
+          <Property Type="String" Name="MultiplicityValue" cg:GetterAccess="Private" cg:SetterAccess="Private" Nullable="false" />
+          <NavigationProperty Name="NavigationProperty" Relationship="Model.MetaNavigationPropertyMetaAssociationRole" FromRole="MetaAssociationRole" ToRole="MetaNavigationProperty" />
+        </EntityType>
+        <Association Name="MetaEntityTypeMetaAssociationRole">
+          <End Type="Model.MetaEntityType" Role="MetaEntityType" Multiplicity="1" />
+          <End Type="Model.MetaAssociationRole" Role="MetaAssociationRole" Multiplicity="*" />
+        </Association>
+        <EntityType Name="MetaComplexType" BaseType="Model.RenameableObject">
+          <NavigationProperty Name="Properties" Relationship="Model.MetaComplexTypeMetaComplexTypeProperty" FromRole="MetaComplexType" ToRole="MetaComplexTypeProperty" />
+        </EntityType>
+        <EntityType Name="MetaComplexProperty" BaseType="Model.RenameableObject">
+          <Property Type="Boolean" Name="Nullable" Nullable="false" />
+          <NavigationProperty Name="EntityType" Relationship="Model.MetaEntityTypeMetaComplexProperty" FromRole="MetaComplexProperty" ToRole="MetaEntityType" />
+          <NavigationProperty Name="ComplexType" Relationship="Model.MetaComplexPropertyMetaComplexType" FromRole="ComplexProperty" ToRole="ComplexType" />
+          <NavigationProperty Name="PropertyMaps" Relationship="Model.MetaComplexPropertyMetaScalarPropertyMap" FromRole="MetaComplexProperty" ToRole="MetaScalarPropertyMap" />
+        </EntityType>
+        <Association Name="MetaEntityTypeMetaComplexProperty">
+          <End Type="Model.MetaEntityType" Role="MetaEntityType" Multiplicity="1" />
+          <End Type="Model.MetaComplexProperty" Role="MetaComplexProperty" Multiplicity="*" />
+        </Association>
+        <Association Name="MetaComplexPropertyMetaComplexType">
+          <End Type="Model.MetaComplexProperty" Multiplicity="*" Role="ComplexProperty" />
+          <End Type="Model.MetaComplexType" Multiplicity="1" Role="ComplexType" />
+        </Association>
+        <EntityType Name="MetaNavigationProperty" BaseType="Model.RenameableObject">
+          <NavigationProperty Name="AssociationRole" Relationship="Model.MetaNavigationPropertyMetaAssociationRole" FromRole="MetaNavigationProperty" ToRole="MetaAssociationRole" >
+            <Documentation>
+              <Summary>The AssociationRole specified by the ToRole attribute</Summary>
+            </Documentation>
+          </NavigationProperty>
+          <NavigationProperty Name="EntityType" Relationship="Model.MetaEntityTypeMetaNavigationProperty" FromRole="MetaNavigationProperty" ToRole="MetaEntityType" />
+        </EntityType>
+        <Association Name="MetaNavigationPropertyMetaAssociationRole">
+          <End Type="Model.MetaNavigationProperty" Role="MetaNavigationProperty" Multiplicity="1" />
+          <End Type="Model.MetaAssociationRole" Role="MetaAssociationRole" Multiplicity="1" />
+        </Association>
+        <EntityType Name="MetaMethod" BaseType="Model.RenameableObject">
+          <Property Type="String" Name="ReturnType" Nullable="false" />
+          <NavigationProperty Name="EntityType" Relationship="Model.MetaEntityTypeMetaMethod" FromRole="MetaMethod" ToRole="MetaEntityType" />
+        </EntityType>
+        <Association Name="MetaEntityTypeMetaMethod">
+          <End Type="Model.MetaEntityType" Role="MetaEntityType" Multiplicity="1" />
+          <End Type="Model.MetaMethod" Role="MetaMethod" Multiplicity="*" />
+        </Association>
+        <EntityType Name="MetaEntitySetStore">
+          <Key>
+            <PropertyRef Name="FullName" />
+          </Key>
+          <Property Type="String" Name="FullName" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="String" Name="Schema" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="false" />
+          <NavigationProperty Name="Concept" Relationship="Model.MetaEntitySetMetaEntitySetStor" FromRole="MetaEntitySetStor" ToRole="MetaEntitySet" />
+          <NavigationProperty Name="EntityTypeStore" Relationship="Model.MetaEntitySetStoreMetaEntityTypeStore" FromRole="MetaEntitySetStore" ToRole="MetaEntityTypeStore" />
+        </EntityType>
+        <Association Name="MetaEntitySetMetaEntitySetStor">
+          <End Type="Model.MetaEntitySet" Role="MetaEntitySet" Multiplicity="1" />
+          <End Type="Model.MetaEntitySetStore" Role="MetaEntitySetStor" Multiplicity="0..1" />
+        </Association>
+        <EntityType Name="MetaPropertyStore">
+          <Key>
+            <PropertyRef Name="FullName" />
+          </Key>
+          <Property Type="String" Name="FullName" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="Nullable" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="false" />
+          <NavigationProperty Name="EntityTypeStore" Relationship="Model.MetaEntityTypeStoreMetaPropertyStore" FromRole="MetaPropertyStore" ToRole="MetaEntityTypeStore" />
+          <Property Type="Boolean" Name="isKey" Nullable="true" />
+          <NavigationProperty Name="ScalarProperty" Relationship="Model.MetaScalarPropertyMetaPropertyStore" FromRole="MetaPropertyStore" ToRole="MetaScalarProperty" cg:GetterAccess="Private" cg:SetterAccess="Private" />
+          <NavigationProperty Name="ComplexTypeProperty" Relationship="Model.MetaComplexTypePropertyMetaPropertyStore" FromRole="MetaPropertyStore" ToRole="MetaComplexTypeProperty" cg:GetterAccess="Private" cg:SetterAccess="Private" />
+        </EntityType>
+        <EntityType Name="MetaEntityTypeStore">
+          <Key>
+            <PropertyRef Name="FullName" />
+          </Key>
+          <Property Type="String" Name="FullName" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Concept" Relationship="Model.MetaEntityTypeMetaEntityTypeStore" FromRole="MetaEntityTypeStore" ToRole="MetaEntityType" />
+          <NavigationProperty Name="EntitySetStore" Relationship="Model.MetaEntitySetStoreMetaEntityTypeStore" FromRole="MetaEntityTypeStore" ToRole="MetaEntitySetStore" />
+          <NavigationProperty Name="PropertiesStores" Relationship="Model.MetaEntityTypeStoreMetaPropertyStore" FromRole="MetaEntityTypeStore" ToRole="MetaPropertyStore" />
+        </EntityType>
+        <Association Name="MetaEntityTypeMetaEntityTypeStore">
+          <End Type="Model.MetaEntityType" Role="MetaEntityType" Multiplicity="1" />
+          <End Type="Model.MetaEntityTypeStore" Role="MetaEntityTypeStore" Multiplicity="0..1" />
+        </Association>
+        <Association Name="MetaEntitySetStoreMetaEntityTypeStore">
+          <End Type="Model.MetaEntitySetStore" Role="MetaEntitySetStore" Multiplicity="1" />
+          <End Type="Model.MetaEntityTypeStore" Role="MetaEntityTypeStore" Multiplicity="0..1" />
+        </Association>
+        <Association Name="MetaEntityTypeStoreMetaPropertyStore">
+          <End Type="Model.MetaEntityTypeStore" Role="MetaEntityTypeStore" Multiplicity="1" />
+          <End Type="Model.MetaPropertyStore" Role="MetaPropertyStore" Multiplicity="*" />
+        </Association>
+        <Association Name="MetaEntityTypeMetaScalarProperty">
+          <End Type="Model.MetaEntityType" Role="MetaEntityType" Multiplicity="1" />
+          <End Type="Model.MetaScalarProperty" Role="MetaScalarProperty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MetaEntityType">
+              <PropertyRef Name="FullName" />
+            </Principal>
+            <Dependent Role="MetaScalarProperty">
+              <PropertyRef Name="EntityTypeFullName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="MetaScalarPropertyMap">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <NavigationProperty Name="ComplexProperty" Relationship="Model.MetaComplexPropertyMetaScalarPropertyMap" FromRole="MetaScalarPropertyMap" ToRole="MetaComplexProperty" />
+          <NavigationProperty Name="ComplexTypeProperty" Relationship="Model.MetaScalarPropertyMapMetaComplexTypeProperty" FromRole="MetaScalarPropertyMap" ToRole="MetaComplexTypeProperty" />
+          <NavigationProperty Name="PropertiesStores" Relationship="Model.MetaScalarPropertyMapMetaPropertyStore" FromRole="MetaScalarPropertyMap" ToRole="MetaPropertyStore" />
+        </EntityType>
+        <Association Name="MetaComplexPropertyMetaScalarPropertyMap">
+          <End Type="Model.MetaComplexProperty" Role="MetaComplexProperty" Multiplicity="1" />
+          <End Type="Model.MetaScalarPropertyMap" Role="MetaScalarPropertyMap" Multiplicity="*" />
+        </Association>
+        <EntityType Name="MetaComplexTypeProperty" BaseType="Model.RenameableObject">
+          <NavigationProperty Name="ComplexType" Relationship="Model.MetaComplexTypeMetaComplexTypeProperty" FromRole="MetaComplexTypeProperty" ToRole="MetaComplexType" />
+          <Property Type="String" Name="Nullable" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="false" />
+          <NavigationProperty Name="Store" Relationship="Model.MetaComplexTypePropertyMetaPropertyStore" FromRole="MetaComplexTypeProperty" ToRole="MetaPropertyStore" />
+        </EntityType>
+        <Association Name="MetaComplexTypeMetaComplexTypeProperty">
+          <End Type="Model.MetaComplexType" Role="MetaComplexType" Multiplicity="1" />
+          <End Type="Model.MetaComplexTypeProperty" Role="MetaComplexTypeProperty" Multiplicity="*" />
+        </Association>
+        <Association Name="MetaScalarPropertyMapMetaComplexTypeProperty">
+          <End Type="Model.MetaScalarPropertyMap" Role="MetaScalarPropertyMap" Multiplicity="1" />
+          <End Type="Model.MetaComplexTypeProperty" Role="MetaComplexTypeProperty" Multiplicity="1" />
+        </Association>
+        <Association Name="MetaScalarPropertyMapMetaPropertyStore">
+          <End Type="Model.MetaScalarPropertyMap" Role="MetaScalarPropertyMap" Multiplicity="1" />
+          <End Type="Model.MetaPropertyStore" Role="MetaPropertyStore" Multiplicity="1" />
+        </Association>
+        <Association Name="MetaScalarPropertyMetaPropertyStore">
+          <End Type="Model.MetaScalarProperty" Role="MetaScalarProperty" Multiplicity="0..1" />
+          <End Type="Model.MetaPropertyStore" Role="MetaPropertyStore" Multiplicity="0..1" />
+        </Association>
+        <Association Name="MetaComplexTypePropertyMetaPropertyStore">
+          <End Type="Model.MetaComplexTypeProperty" Role="MetaComplexTypeProperty" Multiplicity="0..1" />
+          <End Type="Model.MetaPropertyStore" Role="MetaPropertyStore" Multiplicity="0..1" />
+        </Association>
+        <EntityType Name="MetaContainer" BaseType="Model.RenameableObject">
+          <NavigationProperty Name="EntitySets" Relationship="Model.MetaContainerMetaEntitySet" FromRole="MetaContainer" ToRole="MetaEntitySet" />
+          <NavigationProperty Name="Store" Relationship="Model.MetaContainerMetaContainerStore" FromRole="MetaContainer" ToRole="MetaContainerStore" />
+          <NavigationProperty Name="AssociationSets" Relationship="Model.MetaContainerMetaAssociationSet" FromRole="MetaContainer" ToRole="MetaAssociationSet" />
+        </EntityType>
+        <Association Name="MetaContainerMetaEntitySet">
+          <End Type="Model.MetaContainer" Role="MetaContainer" Multiplicity="1" />
+          <End Type="Model.MetaEntitySet" Role="MetaEntitySet" Multiplicity="*" />
+        </Association>
+        <EntityType Name="MetaContainerStore">
+          <Key>
+            <PropertyRef Name="FullName" />
+          </Key>
+          <Property Type="String" Name="FullName" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Concept" Relationship="Model.MetaContainerMetaContainerStore" FromRole="MetaContainerStore" ToRole="MetaContainer" />
+          <Property Type="String" Name="Name" Nullable="false" />
+        </EntityType>
+        <Association Name="MetaContainerMetaContainerStore">
+          <End Type="Model.MetaContainer" Role="MetaContainer" Multiplicity="1" />
+          <End Type="Model.MetaContainerStore" Role="MetaContainerStore" Multiplicity="0..1" />
+        </Association>
+        <EntityType Name="MetaAssociationSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Principal" Relationship="Model.MetaAssociationSetMetaAssociationRole" FromRole="MetaAssociationSet" ToRole="MetaAssociationRole" />
+          <NavigationProperty Name="Dependant" Relationship="Model.MetaAssociationSetMetaAssociationRole1" FromRole="MetaAssociationSet" ToRole="MetaAssociationRole" />
+          <NavigationProperty Name="Container" Relationship="Model.MetaContainerMetaAssociationSet" FromRole="MetaAssociationSet" ToRole="MetaContainer" />
+        </EntityType>
+        <Association Name="MetaAssociationSetMetaAssociationRole">
+          <End Type="Model.MetaAssociationSet" Role="MetaAssociationSet" Multiplicity="0..1" />
+          <End Type="Model.MetaAssociationRole" Role="MetaAssociationRole" Multiplicity="1" />
+        </Association>
+        <Association Name="MetaAssociationSetMetaAssociationRole1">
+          <End Type="Model.MetaAssociationSet" Role="MetaAssociationSet" Multiplicity="0..1" />
+          <End Type="Model.MetaAssociationRole" Role="MetaAssociationRole" Multiplicity="1" />
+        </Association>
+        <Association Name="MetaContainerMetaAssociationSet">
+          <End Type="Model.MetaContainer" Role="MetaContainer" Multiplicity="1" />
+          <End Type="Model.MetaAssociationSet" Role="MetaAssociationSet" Multiplicity="*" />
+        </Association>
+        <EntityType Name="RenameableObject" Abstract="false">
+          <Key>
+            <PropertyRef Name="FullName" />
+          </Key>
+          <Property Type="String" Name="FullName" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Boolean" Name="Renamed" Nullable="false" />
+        </EntityType>
+        <Association Name="MetaEntityTypeMetaNavigationProperty">
+          <End Type="Model.MetaEntityType" Role="MetaEntityType" Multiplicity="1" />
+          <End Type="Model.MetaNavigationProperty" Role="MetaNavigationProperty" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="MetaContext">
+          </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="Model" ZoomLevel="98" >
+        <EntityTypeShape EntityType="Model.MetaEntityType" Width="1.875" PointX="5.25" PointY="6.125" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="Model.MetaEntitySet" Width="1.5" PointX="5.375" PointY="3" Height="1.5956835937499996" />
+        <AssociationConnector Association="Model.MetaEntitySetMetaEntityType">
+          <ConnectorPoint PointX="6.5625" PointY="4.59568359375" />
+          <ConnectorPoint PointX="6.5625" PointY="6.125" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaScalarProperty" Width="1.875" PointX="8.5" PointY="6.5" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="Model.MetaAssociationRole" Width="2.125" PointX="0.875" PointY="3.125" Height="1.5956835937499996" />
+        <AssociationConnector Association="Model.MetaEntityTypeMetaAssociationRole" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="7.7492708007812494" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="7.7492708007812485" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="7.7492708007812494" />
+          <ConnectorPoint PointX="3.8344447853626851" PointY="7.7492708007812485" />
+          <ConnectorPoint PointX="3.6677781186960181" PointY="7.7492708007812494" />
+          <ConnectorPoint PointX="3.2083333333333335" PointY="7.7492708007812485" />
+          <ConnectorPoint PointX="3.0416666666666665" PointY="7.7492708007812494" />
+          <ConnectorPoint PointX="2.96875" PointY="7.7492708007812494" />
+          <ConnectorPoint PointX="2.96875" PointY="4.72068359375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaComplexType" PointX="2" PointY="11.875" Width="1.875" Height="1.2110807291666657" />
+        <EntityTypeShape EntityType="Model.MetaComplexProperty" Width="2.625" PointX="4.625" PointY="9.75" Height="1.7879850260416657" />
+        <AssociationConnector Association="Model.MetaEntityTypeMetaComplexProperty">
+          <ConnectorPoint PointX="6.59375" PointY="8.4898893229166656" />
+          <ConnectorPoint PointX="6.59375" PointY="9.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaComplexPropertyMetaComplexType">
+          <ConnectorPoint PointX="4.625" PointY="10.982941080729166" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="10.982941080729166" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="10.982941080729166" />
+          <ConnectorPoint PointX="3.6048044616954611" PointY="10.982941080729166" />
+          <ConnectorPoint PointX="3.6048044616954611" PointY="11.875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaNavigationProperty" Width="2.125" PointX="0.75" PointY="6.375" Height="1.4033821614583326" />
+        <AssociationConnector Association="Model.MetaNavigationPropertyMetaAssociationRole">
+          <ConnectorPoint PointX="1.34375" PointY="6.375" />
+          <ConnectorPoint PointX="1.34375" PointY="4.72068359375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaMethod" Width="2" PointX="0.75" PointY="9" Height="1.4033821614583317" />
+        <AssociationConnector Association="Model.MetaEntityTypeMetaMethod" ManuallyRouted="true">
+          <ConnectorPoint PointX="5.25" PointY="8.1385669042968747" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="8.1385669042968747" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="8.1385669042968747" />
+          <ConnectorPoint PointX="3.8344447853626851" PointY="8.1385669042968747" />
+          <ConnectorPoint PointX="3.6677781186960181" PointY="8.1385669042968747" />
+          <ConnectorPoint PointX="3.2083333333333335" PointY="8.1385669042968747" />
+          <ConnectorPoint PointX="3.0416666666666665" PointY="8.1385669042968747" />
+          <ConnectorPoint PointX="1.4015117700784852" PointY="8.1385669042968747" />
+          <ConnectorPoint PointX="1.4015117700784852" PointY="9" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaEntitySetStore" Width="1.75" PointX="8" PointY="3" Height="2.172587890625" />
+        <AssociationConnector Association="Model.MetaEntitySetMetaEntitySetStor">
+          <ConnectorPoint PointX="6.875" PointY="3.797841796875" />
+          <ConnectorPoint PointX="8" PointY="3.797841796875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaPropertyStore" Width="1.75" PointX="13.25" PointY="4.625" Height="2.5571907552083326" />
+        <EntityTypeShape EntityType="Model.MetaEntityTypeStore" Width="1.875" PointX="10.75" PointY="3.25" Height="1.9802864583333326" />
+        <AssociationConnector Association="Model.MetaEntityTypeMetaEntityTypeStore">
+          <ConnectorPoint PointX="7.125" PointY="6.28125" />
+          <ConnectorPoint PointX="10.479166666666666" PointY="6.2812499999999991" />
+          <ConnectorPoint PointX="10.645833333333334" PointY="6.28125" />
+          <ConnectorPoint PointX="11.6875" PointY="6.28125" />
+          <ConnectorPoint PointX="11.6875" PointY="5.2302864583333326" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaEntitySetStoreMetaEntityTypeStore">
+          <ConnectorPoint PointX="9.75" PointY="4.2112939453125" />
+          <ConnectorPoint PointX="10.75" PointY="4.2112939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaEntityTypeStoreMetaPropertyStore" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.625" PointY="4.048069136424731" />
+          <ConnectorPoint PointX="14.125" PointY="4.048069136424731" />
+          <ConnectorPoint PointX="14.125" PointY="4.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaEntityTypeMetaScalarProperty">
+          <ConnectorPoint PointX="7.125" PointY="7.4949446614583328" />
+          <ConnectorPoint PointX="8.5" PointY="7.4949446614583328" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaScalarPropertyMap" Width="2.5" PointX="8.5" PointY="10.625" Height="1.7879850260416657" />
+        <AssociationConnector Association="Model.MetaComplexPropertyMetaScalarPropertyMap">
+          <ConnectorPoint PointX="7.25" PointY="11.081492513020834" />
+          <ConnectorPoint PointX="8.5" PointY="11.081492513020834" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaComplexTypeProperty" Width="2.25" PointX="4.875" PointY="12.625" Height="1.7879850260416674" />
+        <AssociationConnector Association="Model.MetaComplexTypeMetaComplexTypeProperty">
+          <ConnectorPoint PointX="3.875" PointY="12.855540364583334" />
+          <ConnectorPoint PointX="4.875" PointY="12.855540364583334" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaScalarPropertyMapMetaComplexTypeProperty">
+          <ConnectorPoint PointX="9.75" PointY="12.412985026041666" />
+          <ConnectorPoint PointX="9.75" PointY="13.238066124669032" />
+          <ConnectorPoint PointX="7.125" PointY="13.238066124669032" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaScalarPropertyMapMetaPropertyStore">
+          <ConnectorPoint PointX="10.5625" PointY="10.625" />
+          <ConnectorPoint PointX="10.5625" PointY="5.7870182291666659" />
+          <ConnectorPoint PointX="11.604166666666666" PointY="5.787018229166665" />
+          <ConnectorPoint PointX="11.770833333333334" PointY="5.7870182291666659" />
+          <ConnectorPoint PointX="13.25" PointY="5.7870182291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaScalarPropertyMetaPropertyStore">
+          <ConnectorPoint PointX="10.375" PointY="6.8410953776041659" />
+          <ConnectorPoint PointX="10.479166666666666" PointY="6.841095377604165" />
+          <ConnectorPoint PointX="10.645833333333334" PointY="6.8410953776041659" />
+          <ConnectorPoint PointX="13.25" PointY="6.8410953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaComplexTypePropertyMetaPropertyStore">
+          <ConnectorPoint PointX="7.125" PointY="13.913637249338066" />
+          <ConnectorPoint PointX="14.125" PointY="13.913637249338066" />
+          <ConnectorPoint PointX="14.125" PointY="7.1821907552083326" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaContainer" Width="1.5" PointX="5.5" PointY="0.5" Height="1.59568359375" />
+        <AssociationConnector Association="Model.MetaContainerMetaEntitySet">
+          <ConnectorPoint PointX="5.8125" PointY="2.09568359375" />
+          <ConnectorPoint PointX="5.8125" PointY="3" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaContainerStore" Width="1.5" PointX="9" PointY="0.625" Height="1.59568359375" />
+        <AssociationConnector Association="Model.MetaContainerMetaContainerStore">
+          <ConnectorPoint PointX="7" PointY="1.360341796875" />
+          <ConnectorPoint PointX="9" PointY="1.360341796875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.MetaAssociationSet" Width="2.125" PointX="2.625" PointY="0.5" Height="1.787985026041667" />
+        <AssociationConnector Association="Model.MetaAssociationSetMetaAssociationRole" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.734375" PointY="2.287985026041667" />
+          <ConnectorPoint PointX="2.734375" PointY="3.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaAssociationSetMetaAssociationRole1">
+          <ConnectorPoint PointX="2.9296875" PointY="2.287985026041667" />
+          <ConnectorPoint PointX="2.9296875" PointY="3.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.MetaContainerMetaAssociationSet">
+          <ConnectorPoint PointX="5.5" PointY="1.297841796875" />
+          <ConnectorPoint PointX="4.75" PointY="1.297841796875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.RenameableObject" Width="1.5" PointX="3.375" PointY="5.375" Height="1.59568359375" />
+        <InheritanceConnector EntityType="Model.MetaAssociationRole">
+          <ConnectorPoint PointX="4.125" PointY="5.375" />
+          <ConnectorPoint PointX="4.125" PointY="5.09568359375" />
+          <ConnectorPoint PointX="3.2083333333333335" PointY="5.0956835937499987" />
+          <ConnectorPoint PointX="2.8854166666666665" PointY="5.09568359375" />
+          <ConnectorPoint PointX="1.9375" PointY="5.09568359375" />
+          <ConnectorPoint PointX="1.9375" PointY="4.72068359375" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="Model.MetaContainer" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.125" PointY="5.375" />
+          <ConnectorPoint PointX="4.125" PointY="2.47068359375" />
+          <ConnectorPoint PointX="5.729166666666667" PointY="2.4706835937499996" />
+          <ConnectorPoint PointX="5.895833333333333" PointY="2.47068359375" />
+          <ConnectorPoint PointX="6.25" PointY="2.47068359375" />
+          <ConnectorPoint PointX="6.25" PointY="2.09568359375" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="Model.MetaEntitySet" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.125" PointY="5.375" />
+          <ConnectorPoint PointX="4.125" PointY="4.97068359375" />
+          <ConnectorPoint PointX="6.125" PointY="4.97068359375" />
+          <ConnectorPoint PointX="6.125" PointY="4.59568359375" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="Model.MetaEntityType" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.875" PointY="6.547841796875" />
+          <ConnectorPoint PointX="5.25" PointY="6.547841796875" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="Model.MetaNavigationProperty" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.375" PointY="6.672841796875" />
+          <ConnectorPoint PointX="3.2083333333333335" PointY="6.6728417968749989" />
+          <ConnectorPoint PointX="2.8854166666666665" PointY="6.672841796875" />
+          <ConnectorPoint PointX="2.875" PointY="6.672841796875" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="Model.MetaMethod" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.125" PointY="6.97068359375" />
+          <ConnectorPoint PointX="4.125" PointY="8.625" />
+          <ConnectorPoint PointX="3.4010435235386907" PointY="8.625" />
+          <ConnectorPoint PointX="3.2343768568720237" PointY="8.625" />
+          <ConnectorPoint PointX="3.2083333333333335" PointY="8.625" />
+          <ConnectorPoint PointX="3.0416666666666665" PointY="8.625" />
+          <ConnectorPoint PointX="1.75" PointY="8.625" />
+          <ConnectorPoint PointX="1.75" PointY="9" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="Model.MetaComplexProperty" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.125" PointY="6.97068359375" />
+          <ConnectorPoint PointX="4.125" PointY="9.375" />
+          <ConnectorPoint PointX="5.9375" PointY="9.375" />
+          <ConnectorPoint PointX="5.9375" PointY="9.75" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="Model.MetaScalarProperty" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.125" PointY="5.375" />
+          <ConnectorPoint PointX="4.125" PointY="5" />
+          <ConnectorPoint PointX="3.125" PointY="5" />
+          <ConnectorPoint PointX="3.125" PointY="9.047587890625" />
+          <ConnectorPoint PointX="3.2343768568720237" PointY="9.047587890625" />
+          <ConnectorPoint PointX="3.4010435235386907" PointY="9.047587890625" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="9.047587890625" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="9.047587890625" />
+          <ConnectorPoint PointX="6.510416666666667" PointY="9.047587890625" />
+          <ConnectorPoint PointX="6.677083333333333" PointY="9.047587890625" />
+          <ConnectorPoint PointX="9.4375" PointY="9.047587890625" />
+          <ConnectorPoint PointX="9.4375" PointY="8.672587890625" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="Model.MetaComplexType" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.7511114520293516" PointY="6.97068359375" />
+          <ConnectorPoint PointX="3.7511114520293516" PointY="8.4653580078125" />
+          <ConnectorPoint PointX="3.3177101902053572" PointY="8.4653580078125" />
+          <ConnectorPoint PointX="3.3177101902053572" PointY="11.875" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="Model.MetaComplexTypeProperty" ManuallyRouted="true">
+          <ConnectorPoint PointX="4.125" PointY="6.97068359375" />
+          <ConnectorPoint PointX="4.125" PointY="12.37744496626215" />
+          <ConnectorPoint PointX="6" PointY="12.37744496626215" />
+          <ConnectorPoint PointX="6" PointY="12.625" />
+        </InheritanceConnector>
+        <AssociationConnector Association="Model.MetaEntityTypeMetaNavigationProperty">
+          <ConnectorPoint PointX="5.25" PointY="7.4057828776041656" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="7.4057828776041648" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="7.4057828776041656" />
+          <ConnectorPoint PointX="3.8344447853626851" PointY="7.4057828776041648" />
+          <ConnectorPoint PointX="3.6677781186960181" PointY="7.4057828776041656" />
+          <ConnectorPoint PointX="3.2083333333333335" PointY="7.4057828776041648" />
+          <ConnectorPoint PointX="2.8854166666666665" PointY="7.4057828776041656" />
+          <ConnectorPoint PointX="2.875" PointY="7.4057828776041656" />
+        </AssociationConnector>
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

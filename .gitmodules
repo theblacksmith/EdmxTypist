@@ -1,0 +1,3 @@
+[submodule "EdmxTypist/BindingTools"]
+	path = EdmxTypist/BindingTools
+	url = git://github.com/svallory/BindingTools.git

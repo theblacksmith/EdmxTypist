@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<flowGraph xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" name="" xmlns="http://www.tangiblearchitect.com/dsltools/Activity">
+  <actors>
+    <actor name="Renamer">
+      <flowElements>
+        <task name="GetName">
+          <flowTo>
+            <flow>
+              <taskMoniker name="//Renamer/BeforeRenaming" />
+            </flow>
+          </flowTo>
+        </task>
+        <task name="BeforeRenaming">
+          <flowTo>
+            <flow>
+              <mergeBranchMoniker name="//Renamer/MergeBranch1" />
+            </flow>
+          </flowTo>
+        </task>
+        <task name="Format">
+          <flowTo>
+            <flow>
+              <mergeBranchMoniker name="//Renamer/MergeBranch2" />
+            </flow>
+          </flowTo>
+        </task>
+        <mergeBranch name="MergeBranch1">
+          <flowTo>
+            <flow guard="!skipRules">
+              <taskMoniker name="//Renamer/Format" />
+            </flow>
+            <flow>
+              <synchronizationMoniker name="//Renamer/Synchronization1" />
+            </flow>
+          </flowTo>
+        </mergeBranch>
+        <task name="AfterRenaming">
+          <flowTo>
+            <flow>
+              <endPointMoniker name="//Renamer/EndPoint1" />
+            </flow>
+          </flowTo>
+        </task>
+        <endPoint name="EndPoint1" />
+        <startPoint name="StartPoint1">
+          <flowTo>
+            <flow>
+              <taskMoniker name="//Renamer/GetName" />
+            </flow>
+          </flowTo>
+        </startPoint>
+        <task name="ApplyRegexInstead">
+          <flowTo>
+            <flow>
+              <synchronizationMoniker name="//Renamer/Synchronization1" />
+            </flow>
+          </flowTo>
+        </task>
+        <mergeBranch name="MergeBranch2">
+          <flowTo>
+            <flow guard="ApplyRegex.InsteadOfRules">
+              <taskMoniker name="//Renamer/ApplyRegexInstead" />
+            </flow>
+            <flow guard="ApplyRegex.BeforeRules">
+              <taskMoniker name="//Renamer/ApplyRegexBefore" />
+            </flow>
+            <flow guard="! ApplyRegex.InsteadOfRules">
+              <taskMoniker name="//Renamer/RemovePrefixes" />
+            </flow>
+          </flowTo>
+        </mergeBranch>
+        <task name="RemovePrefixes">
+          <flowTo>
+            <flow>
+              <taskMoniker name="//Renamer/RemoveSuffixes" />
+            </flow>
+          </flowTo>
+        </task>
+        <task name="RemoveSuffixes">
+          <flowTo>
+            <flow>
+              <taskMoniker name="//Renamer/AddPrefix" />
+            </flow>
+          </flowTo>
+        </task>
+        <task name="AddPrefix">
+          <flowTo>
+            <flow>
+              <taskMoniker name="//Renamer/AddSuffix" />
+            </flow>
+          </flowTo>
+        </task>
+        <task name="AddSuffix">
+          <flowTo>
+            <flow>
+              <taskMoniker name="//Renamer/Rename" />
+            </flow>
+          </flowTo>
+        </task>
+        <task name="Rename">
+          <flowTo>
+            <flow>
+              <mergeBranchMoniker name="//Renamer/MergeBranch3" />
+            </flow>
+            <flow>
+              <mergeBranchMoniker name="//Renamer/MergeBranch4" />
+            </flow>
+          </flowTo>
+        </task>
+        <mergeBranch name="MergeBranch3">
+          <flowTo>
+            <flow>
+              <taskMoniker name="//Renamer/ToPlural" />
+            </flow>
+            <flow>
+              <taskMoniker name="//Renamer/ToSingular" />
+            </flow>
+          </flowTo>
+        </mergeBranch>
+        <task name="ToPlural" />
+        <task name="ToSingular" />
+        <mergeBranch name="MergeBranch4">
+          <flowTo>
+            <flow>
+              <synchronizationMoniker name="//Renamer/Synchronization1" />
+            </flow>
+            <flow guard="ApplyRegexAfterRules">
+              <taskMoniker name="//Renamer/ApplyRegexAfter" />
+            </flow>
+          </flowTo>
+        </mergeBranch>
+        <synchronization name="Synchronization1">
+          <flowTo>
+            <flow>
+              <taskMoniker name="//Renamer/AfterRenaming" />
+            </flow>
+          </flowTo>
+        </synchronization>
+        <task name="ApplyRegexAfter" />
+        <task name="ApplyRegexBefore" />
+      </flowElements>
+    </actor>
+  </actors>
+</flowGraph>

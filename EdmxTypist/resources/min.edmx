@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="InflectorTestModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="InflectorTestModelStoreContainer">
+          <EntitySet Name="pedidos" EntityType="InflectorTestModel.Store.pedidos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="usuarios" EntityType="InflectorTestModel.Store.usuarios" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_pedidos_usuarios" Association="InflectorTestModel.Store.FK_pedidos_usuarios">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="pedidos" EntitySet="pedidos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="pedidos">
+          <Key>
+            <PropertyRef Name="pedido_id" />
+          </Key>
+          <Property Name="pedido_id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="qtd_parcelas" Type="smallint" />
+          <Property Name="bonus_pontos_boleto" Type="bit" />
+          <Property Name="bonus_pontos_boleto_creditado" Type="bit" />
+          <Property Name="total" Type="int" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="nome" Type="nchar" MaxLength="10" />
+          <Property Name="sexo" Type="char" MaxLength="1" />
+          <Property Name="cep" Type="nchar" MaxLength="10" />
+          <Property Name="cidade" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_pedidos_usuarios">
+          <End Role="usuarios" Type="InflectorTestModel.Store.usuarios" Multiplicity="1" />
+          <End Role="pedidos" Type="InflectorTestModel.Store.pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="pedidos">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetPedidosByUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="user_id" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InflectorTestModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="InflectorTestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="pedidos" EntityType="InflectorTestModel.pedidos" />
+          <EntitySet Name="usuarios" EntityType="InflectorTestModel.usuarios" />
+          <AssociationSet Name="FK_pedidos_usuarios" Association="InflectorTestModel.FK_pedidos_usuarios">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="pedidos" EntitySet="pedidos" />
+          </AssociationSet>
+          <FunctionImport Name="get_pedidos" EntitySet="pedidos" ReturnType="Collection(InflectorTestModel.pedidos)">
+          <Parameter Name="user_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="pedidos">
+          <Key>
+            <PropertyRef Name="pedido_id" />
+          </Key>
+          <Property Name="pedido_id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="qtd_parcelas" Type="Int16" />
+          <Property Name="bonus_pontos_boleto" Type="Boolean" />
+          <Property Name="bonus_pontos_boleto_creditado" Type="Boolean" />
+          <Property Name="total" Type="Int32" />
+          <NavigationProperty Name="usuarios" Relationship="InflectorTestModel.FK_pedidos_usuarios" FromRole="pedidos" ToRole="usuarios" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="nome" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="sexo" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="pedidos" Relationship="InflectorTestModel.FK_pedidos_usuarios" FromRole="usuarios" ToRole="pedidos" />
+          <Property Name="endereco" Type="InflectorTestModel.endereco" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_pedidos_usuarios">
+          <End Role="usuarios" Type="InflectorTestModel.usuarios" Multiplicity="1" />
+          <End Role="pedidos" Type="InflectorTestModel.pedidos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="pedidos">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="endereco">
+          <Property Type="String" Name="cep" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="cidade" MaxLength="50" FixedLength="true" Unicode="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InflectorTestModelStoreContainer" CdmEntityContainer="InflectorTestEntities">
+          <EntitySetMapping Name="pedidos">
+            <EntityTypeMapping TypeName="InflectorTestModel.pedidos">
+              <MappingFragment StoreEntitySet="pedidos">
+                <ScalarProperty Name="pedido_id" ColumnName="pedido_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="qtd_parcelas" ColumnName="qtd_parcelas" />
+                <ScalarProperty Name="bonus_pontos_boleto" ColumnName="bonus_pontos_boleto" />
+                <ScalarProperty Name="bonus_pontos_boleto_creditado" ColumnName="bonus_pontos_boleto_creditado" />
+                <ScalarProperty Name="total" ColumnName="total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="InflectorTestModel.usuarios">
+              <MappingFragment StoreEntitySet="usuarios">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ComplexProperty Name="endereco">
+                  <ScalarProperty Name="cidade" ColumnName="cidade" />
+                  <ScalarProperty Name="cep" ColumnName="cep" />
+                </ComplexProperty>
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="get_pedidos" FunctionName="InflectorTestModel.Store.GetPedidosByUsuario" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="min">
+        <EntityTypeShape EntityType="InflectorTestModel.pedidos" Width="1.5" PointX="4.375" PointY="1.125" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="InflectorTestModel.usuarios" Width="1.5" PointX="0.75" PointY="1.25" Height="1.787985026041667" IsExpanded="true" />
+        <AssociationConnector Association="InflectorTestModel.FK_pedidos_usuarios" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.1439925130208337" />
+          <ConnectorPoint PointX="4.375" PointY="2.1439925130208337" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
