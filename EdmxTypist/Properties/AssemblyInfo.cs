@@ -1,16 +1,33 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿/**
+ * This file is part of Edmx Typist  - A cyber typist to help you fix your edmx file.
+ * Copyright (C) 2012 Saulo Vallory <me@saulovallory.com>
+ * 
+ * Edmx Typist is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *  
+ * Edmx Typist is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Edmx Typist. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EDMXTool")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Edmx Typist")]
+[assembly: AssemblyDescription("A cyber typist to help you fix your edmx file")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EDMXTool")]
-[assembly: AssemblyCopyright("Copyright ©  2011")]
+[assembly: AssemblyProduct("EdmxTypist")]
+[assembly: AssemblyCopyright("Copyright ©  2012 Saulo Vallory <me@saulovallory.com>")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

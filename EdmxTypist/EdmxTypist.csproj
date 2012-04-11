@@ -267,6 +267,8 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\EdmxTool.Options.ContextOptions.datasource" />
+    <None Include="Properties\DataSources\EdmxTypist.resources.InflectorTestEntities.datasource" />
+    <None Include="Properties\DataSources\EdmxTypist.resources.InflectorTestEntitiesProcessed.datasource" />
     <None Include="Properties\DataSources\EdmxTypist.resources.MoviesContainer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
