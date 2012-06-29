@@ -33,7 +33,7 @@ Well, if you knew Edmx Typist back then you wouldn't have to :)
 ## An image is worth more than… 
 
 <a href="images/screenshot.png" target="_blank">
-  <img src="http://projects/static/EdmxTypist/images/screenshot.png" style="width: 600px" />
+  <img src="http://svallory.github.com/EdmxTypist/images/screenshot.png" style="width: 600px" />
 </a>
 
 ## Let's have the words anyway! So, what can you do with it?
