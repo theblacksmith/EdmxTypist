@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Edmx Typist by svallory</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Edmx Typist</h1>
+        <p>An Entity Framework .edmx file fixer</p>
+        <p class="view"><a href="https://github.com/svallory/EdmxTypist">View the Project on GitHub <small>svallory/EdmxTypist</small></a></p>
+        <ul>
+          <li><a href="https://github.com/svallory/EdmxTypist/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/svallory/EdmxTypist/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/svallory/EdmxTypist">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Edmx Typist</h1>
+
+<p>A cyber typist which will help you fix your edmx files. It formats the names of Entities, properties and more on a configurable, automated way. </p>
+
+<p><a href="http://www.pledgie.com/campaigns/17089"><img src="http://www.pledgie.com/campaigns/17089.png?skin_name=chrome" alt="Click here to lend your support to: Edmx Typist and make a donation at www.pledgie.com !"></a></p>
+
+<h2>Have your ever...</h2>
+
+<p>Started a project using Entity Framework with a Database First approach? Did it have a messy, or just not your style, database table and column names? Let's say something like..</p>
+
+<pre><code>tbl_user
+  user_id
+  dt_creation
+
+tbl_posts
+  post_id
+  fk_user_id
+  txt_content
+</code></pre>
+
+<p>And you had to manually edit your entites to have something like…</p>
+
+<pre><code>User
+  Id
+  CreationDate
+
+Posts
+  Id
+  UserId
+  Content
+</code></pre>
+
+<p>Well, if you knew Edmx Typist back then you wouldn't have to :)</p>
+
+<h2>An image is worth more than…</h2>
+
+<p><a href="images/screenshot.png" target="_blank">
+  <img src="images/screenshot.png"></a></p>
+
+<h2>Let's have the words anyway! So, what can you do with it?</h2>
+
+<p>You can...</p>
+
+<ul>
+<li>Add prefixes or suffixes</li>
+<li>Remove prefixes and suffixes</li>
+<li>Apply a regular expression find and replace</li>
+<li>Change the casing to CamelCase, lowerCamelCase or underscore_style</li>
+<li>Pluralize and singularize names in English or Portuguese</li>
+<li>
+<p>Ask Typist to decide wheter the name should be pluralized or singularized based on the amount of values it represents.</p>
+
+<blockquote>
+<p>For example, a navigation property to a single <code>User</code> instance will be singularized while a navigation property to a <code>List&lt;Post&gt;</code> will be pluralized.</p>
+</blockquote>
+</li>
+<li><p>Oh, and you can set any of this things to a specific meta-type (eg. for entity sets, comples properties, methods, etc.)</p></li>
+</ul><p>And, if that isn't enough you can…</p>
+
+<ul>
+<li>Implement a custom flexing rules class using <a href="http://github.com/svallory/Flexer">Flexer</a> to support your language</li>
+<li>Create <strong>Your Own Renamer</strong> extending the <a href="https://github.com/svallory/EdmxTypist/blob/master/EdmxTypist/Renamer/IRenamer.cs">IRenamer interface</a> to specify your own weird rules :)</li>
+</ul><h2>Want to Help?</h2>
+
+<p>In the spirit of <a href="http://www.fsf.org/licensing/essays/free-sw.html">free software</a>, <strong>everyone</strong> is encouraged to help
+improve this project.</p>
+
+<p>Here are some ways <strong>you</strong> can contribute:</p>
+
+<ul>
+<li>Coding (just fork, code and make a pull request. Common, it's easy...)</li>
+<li>Reporting <a href="https://github.com/svallory/EdmxTypist/issues">issues</a>
+</li>
+<li>Suggesting <a href="https://github.com/svallory/EdmxTypist/issues">new features</a>
+</li>
+<li>Writing <a href="https://github.com/svallory/EdmxTypist/wiki">documentation</a> (we really need it)</li>
+<li><a href="http://www.pledgie.com/campaigns/17089">Financially</a></li>
+</ul>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/svallory">svallory</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
