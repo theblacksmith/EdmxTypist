@@ -77,3 +77,6 @@ Here are some ways **you** can contribute:
 [pledgie]: http://www.pledgie.com/campaigns/17089
 [issues]: https://github.com/svallory/EdmxTypist/issues
 [wiki]: https://github.com/svallory/EdmxTypist/wiki
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/theblacksmith/edmxtypist/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
